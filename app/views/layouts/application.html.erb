@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MovieQ</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+<!-- header -->
+  <header class="navbar navbar-link">
+      <a href="/", style="color:#333 text-left">movieQ</a>
+      <nav>
+          <ul class="nav navbar-nav navbar-right">
+    <!--ユーザーサインイン時　-->
+            <% if user_signed_in? %>
+              <li><%= link_to " Home", user_home_path(current_user), class: "btn btn-default btn-sm" %></li>
+              <li><%= link_to " クイズをつくる", new_quiz_path, class: "btn btn-default btn-sm" %></li>
+              <li><%= link_to " 挑戦", "#", class: "btn btn-default btn-sm" %></li>
+              <li> <%= link_to " ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "btn btn-default btn-sm" %></li>
+    <!--管理サインイン時　-->
+            <% elsif admin_signed_in? %>
+              <li><%= link_to " TOP画面" , admins_movies_path ,  class: "#"%></li>
+              <li> <%= link_to " 管理者ログアウト" , destroy_admin_session_path ,method: :delete , class: "#" %></li>
+    <!--ユーザーサインアウト時　-->
+            <% else %>
+              <li><%= link_to " このサイトについて", "#", class: 'btn btn-default btn-sm' %></li>
+              <li><%= link_to " 挑戦", "#", class: "btn btn-default btn-sm" %></li>
+              <li><%= link_to " 新規登録", new_user_registration_path, class: 'btn btn-default btn-sm' %></li>
+              <li><%= link_to " ログイン", new_user_session_path, class: 'btn btn-default btn-sm' %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <body>
+      <div id="wrapper">
+      <main><%= yield %></main>
+<!-- footer -->
+      <footer><p class="text">©2020 Presented by movieQ.</p></footer>
+
+      </wrapper>
+    </div>
+  </body>
+</html>

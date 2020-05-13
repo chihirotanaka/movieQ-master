@@ -1,0 +1,14 @@
+// Place all the styles related to the admins::movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper{
+
+    display: flex;
+    justify-content: flex-start;    /*左揃え*/
+    justify-content: flex-end;      /*右揃え*/
+    justify-content: center;        /*中央揃え*/
+    justify-content: space-between; /*均等に間隔をあける*/
+    justify-content: space-around;  /*均等に間隔をあける・両端にも間隔をあける*/
+}
+

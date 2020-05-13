@@ -1,0 +1,9 @@
+ja:
+  enums:
+    movie:
+      theme_title:
+        '---': "---"
+        USATOP5: アメリカ映画TOP5
+        JATOP5: 日本映画TOP5
+        GhibliTOP5: ジブリ映画TOP5
+        Topicwork5: 今話題の5作品
