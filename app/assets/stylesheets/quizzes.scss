@@ -2,8 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container{
-　　width:700px;
-　　margin-right: auto;
-　　margin-left : auto;
+/*top-container
+-------------------------------------*/
+.top-container {
+	height: 400px;
 }
+.quiz-top-contant {
+    text-align: center;
+
+	h1 {
+		font-size: 8rem;
+		}
+	p{
+		margin: 10px 0 40px;
+		font-size: 1.5rem;
+	}
+}
+.button {
+	font-size: 2rem;
+	background: #0bd;
+	color: #fff;
+	border-radius: 70px;
+	padding: 18px 32px;
+
+	&:hover {
+		background: #0090aa;
+	}
+}
+
+/*about-container
+-------------------------------------*/
+.about-container {
+  display: grid;
+  grit-template-columns: 300px 300px 300px;
+  gap: 6px;/*間の間隔*/
+  height: 40%;
+
+.item {
+	background: #0bd;
+}
+  h2{
+	/*border-bottom:1px dashed #333;*/
+    padding:4px 6px;
+  }
+  p{
+	/*border-bottom:1px dashed #333;*/
+    padding:4px 6px;
+  }
+}
+
+

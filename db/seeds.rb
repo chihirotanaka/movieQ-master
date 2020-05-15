@@ -15,7 +15,7 @@ Admin.create(
 # user pass
 
 # theme
-["---","USATOP5", "JATOP5", "GhibliTOP5", "Topicwork5"].each do |t|
+["---","アメリカ映画TOP5", "日本映画TOP5", "ジブリ映画TOP5", "今話題の5作品"].each do |t|
 	Theme.create!(
 	    theme: t
 	)

@@ -1,26 +1,26 @@
 <div class="wrapper">
-  <div class="element">
+  <div class="element1">
 
     <h2>movie情報作成</h2>
     <%= form_for(@newmovie, url: admins_movies_path, method: :post) do |f| %>
 
-    <p>画像</p>
+    <label>画像</label><br />
     <%= f.attachment_field :image %>
-    <p>お題</p>
+    <label>お題</label><br />
     <%= f.collection_select :theme_id, @themes, :id, :theme %><br />
-    <p>制作年</p>
-    <%= f.select :year, Movie.years.keys, :selected=>Movie.years[@newmovie.year] %>
-    <p>タイトル</p>
-    <%= f.text_field :title %>
-    <p>コラム</p>
-    <%= f.text_area :column %>
-    <%= f.submit '作成'%>
+    <label>制作年</label><br />
+    <%= f.select :year, Movie.years.keys, :selected=>Movie.years[@newmovie.year] %><br />
+    <label>タイトル</label><br />
+    <%= f.text_field :title %><br />
+    <label>コラム</label><br />
+    <%= f.text_area :column %><br />
+    <%= f.submit '作成'%><br />
 
   <% end %>
 
   </div>
 
-<div class="element">
+<div class="element2">
 <!--  映画情報一覧 -->
     <table class="table table-default">
       <tr>
@@ -39,7 +39,7 @@
           </td>
           <td><%= movie.column %></td>
           <td><%= movie.year %></td>
-          <td><%= movie.theme_title_i18n %></td>
+          <td><%= movie.theme.theme %></td>
           <td>
             <%= link_to '編集', edit_admins_movie_path(movie.id),class: "label label-success " %>
             <%= link_to '削除', admins_movie_path(movie.id),class: "label label-danger", method: :delete, data: {confirm: "削除しますか？"} %>

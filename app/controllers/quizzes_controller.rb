@@ -9,10 +9,9 @@ before_action :set_quiz, only: [:quiz, :result, :total]
   def new
     @newquiz = Quiz.new
     @movies = Movie.all
-    # ここはサンプルとして追記 参考にしてください
-    @ThemeTitles = Movie.theme_titles
-    # ここまで
-
+    @themes = Theme.all
+    @movietheme = Movie.where(theme_id: params[:theme_id])
+    # @Themes = Movie.theme.theme
   end
 
   def create
@@ -50,7 +49,7 @@ before_action :set_quiz, only: [:quiz, :result, :total]
 
   private
   def post_quiz_params
-    params.require(:quiz).permit(:user_id, :movie_id, :movie_title,
+    params.require(:quiz).permit(:user_id, :theme_id, :movie_id,
      :question, :emoji, :answer, :answer2, :answer3)
   end
 
