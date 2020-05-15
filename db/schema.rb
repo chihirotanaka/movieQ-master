@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_13_182613) do
+ActiveRecord::Schema.define(version: 2020_05_15_050445) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -79,6 +79,8 @@ ActiveRecord::Schema.define(version: 2020_05_13_182613) do
     t.string "answer3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "emoji2"
+    t.string "emoji3"
   end
 
   create_table "themes", force: :cascade do |t|

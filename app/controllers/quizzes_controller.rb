@@ -16,9 +16,9 @@ before_action :set_quiz, only: [:quiz, :result, :total]
 
   def create
     @newquiz = Quiz.new(post_quiz_params)
-    @newquiz.user.id == current_user.id
-    if @newquizze.save
-    redirect_to user_home_path
+    @newquiz.user_id = current_user.id
+    if @newquiz.save
+    redirect_to user_home_path(current_user)
     else
     render 'back'
     end
@@ -33,8 +33,10 @@ before_action :set_quiz, only: [:quiz, :result, :total]
   end
 
   def destroy
+    @quizzes = Quiz.find(params)
+    if @quiz
     @quiz.destroy
-    redirect_to user_home_path
+    redirect_to user_home_path(current_user)
   end
 
 # クイズ画面
@@ -50,7 +52,7 @@ before_action :set_quiz, only: [:quiz, :result, :total]
   private
   def post_quiz_params
     params.require(:quiz).permit(:user_id, :theme_id, :movie_id,
-     :question, :emoji, :answer, :answer2, :answer3)
+     :question, :emoji, :emoji2, :emoji3, :answer, :answer2, :answer3)
   end
 
   def set_quiz

@@ -2,11 +2,12 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def home
-  	@quizzes = current_user.quizzes.all
+    @quizzes = Quiz.all
+  	@quiz = Quiz.find(params[:id])
   end
 
   def edit
-  	@user = curent_user.all
+  	@quiz = Quiz.find(params[:id])
   end
 
   def update

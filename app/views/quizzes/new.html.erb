@@ -9,28 +9,37 @@
             <%= f.collection_select :theme_id , @themes , :id, :theme ,class: "form-control"%><br />
         </div>
         <div class="form-group">
-            <%= f.label "好きなタイトルを選んでください" %><br />
+            <%= f.label "好きなタイトルを選んでください" %>
             <%= f.collection_select :movie_id, @movies, :id, :title ,class: "form-control"%><br />
         </div>
         <div class="form-group">
-   	        <%= f.label "絵文字をえらぶ" , class: "control-label"%><br />
-   	        1<%= f.text_field :emoji %><br />
-            2<%= f.text_field :emoji %><br />
-            3<%= f.text_field :emoji %><br />
+   	        <%= f.label "絵文字をえらぶ " , class: "control-label"%><br />
+             <span><small>※選んだタイトルを絵文字で表現してください</small></span><br />
+             <span><small> 例：ハリーポッター=>1:🧹2:⚡︎3:👦</small></span><br />
+            <%= f.label "1" %>
+   	        <%= f.text_field :emoji %>
+            <%= f.label "2" %>
+            <%= f.text_field :emoji2 %>
+            <%= f.label "3" %>
+            <%= f.text_field :emoji3 %>
         </div>
         <div class="form-group">
    	        <%= f.label "問題文をつくる", class: "control-label" %><br />
+            <%= f.label "Q" %>
    	        <%= f.text_field :question %><br />
         </div>
         <div class="form-group">
    	        <%= f.label "選択肢をつくる", class: "control-label"%><br />
-          <p style="font-size:8px">※一番上を答えにしてください！</p><br />
-  	        1<%= f.text_field :answer %><br />
-   	        2<%= f.text_field :answer2 %><br />
-            3<%= f.text_field :answer3 %><br />
+            <%= f.label "[答え]の選択肢" %>
+  	        <%= f.text_field :answer %><br />
+            <%= f.label "2つめの選択肢" %>
+   	        <%= f.text_field :answer2 %><br />
+            <%= f.label "3つめの選択肢" %>
+            <%= f.text_field :answer3 %><br />
         </div>
 
-          <%= submit_tag '作成する',class: "btn btn-default" %>
+          <%= f.submit '作成する',class: "btn btn-default" %>
+
       <% end %>
 </div>
 

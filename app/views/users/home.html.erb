@@ -3,20 +3,28 @@
 <div class="element">
     <table class="table table-default">
       <tr>
-        <th>No.</th>
         <th>絵文字😄</th>
         <th>Question</th>
         <th>閲覧数</th>
         <th colspan="2">評価</th>
+        <th colspan="2">編集</th>
       </tr>
       <% @quizzes.each do |q| %>
       <tr>
-          <td><%= q.id %></td>
-          <td><%= q.emoji%></td>
+          <td><%= q.emoji%>
+              <%= q.emoji2%>
+              <%= q.emoji3%>
+          </td>
           <td><%= q.question%></td>
           <td>閲覧数<%= %></td>
-          <td>👍<%= q.favorites.count %></td>
-          <td>👎<%= q.unfavories.count %></td>
+          <td>👍<%= "#" %></td>
+          <td>👎<%= "#" %></td>
+            <% if @quizzes.user == current_user %>
+          <td><%=link_to "編集　", edit_quiz_path(quiz) %></td>
+          <td><%=link_to "削除　", edit_quiz_path(quiz) %></td>
+              <i class="far fa-edit"></i>
+              <i class="far fa-trash-alt"></i>
+            <% end%>
       </tr>
       <% end %>
     </table>
