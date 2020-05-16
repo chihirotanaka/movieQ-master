@@ -1,23 +1,30 @@
 
-<div class="container">
-	<div class="item1">
-		<h3><strong>第<%= 1%>問</strong></h3>
-    </div>
-    <div class="item1">
-		<h5>絵文字</h5>
-	</div>
-	<div class="item1">
-		<h5>問題</h5>
-	</div>
-	<div class="item1">
-		<h5>選択肢1</h5>
-	</div>
-	<div class="item1">
-		<h5>選択肢2</h5>
-	</div>
-	<div class="item1">
-		<h5>選択肢3</h5>
+<div id="quiz-container">
+	<div class="title-box">
+		<p><strong>第<%= 1%>問</strong></p>
 	</div>
 
+		<div class="emogi-container">
+		    <div class="emoji-box">
+				<p><%= @quiz.emoji %></p>
+			</div>
+			<div class="emoji-box">
+			    <p><%= @quiz.emoji2 %></p>
+			</div>
+			<div class="emoji-box">
+				<p><%= @quiz.emoji3 %></p>
+			</div>
+		</div>
 
-</div><!---container--->
+		<div class="question-box">
+				<p><strong>Q:<%= @quiz.question %></strong></p>
+		</div>
+
+        <div class="answer-box">
+				<p><small><%= @quiz.answer %></small></p>
+				<p><small><%= @quiz.answer2 %></small></p>
+				<p><small><%= @quiz.answer3 %></small></p>
+		</div>
+
+
+</div><!---quiz-container--->

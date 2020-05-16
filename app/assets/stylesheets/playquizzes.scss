@@ -2,9 +2,74 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#quiz-warapper {
-  maxwidth: 1100px;
-  margin: 0 auto;
-  padding: 0 4%;
-  text-align: center;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+
+#quiz-wrapper {
+	margin: 0 auto;
+	padding: 0 4%;
+	height: 100vh;
 }
+
+/*quiz画面 
+--------------------------------*/
+#quiz-container {
+	text-align: center;
+}
+
+.title-box {
+    margin-top:32px;
+    border-radius: 8px;
+    background-color: #333;
+
+	p {
+	  padding: 18px;
+    font-size: 2rem;
+    color: #fff;
+    }
+}
+
+ /* 絵文字 */  
+
+.emogi-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    p {
+    padding: 16px;
+    margin-right: 28px;
+    font-size: 5.5rem;
+    }
+}
+/* 問題 */
+.question-box {
+    margin-top: 22px;
+
+  p {
+    font-size: 2rem;
+  }	
+}
+
+/* 選択肢 */
+.answer-box {
+  margin-top:18px; 
+
+  p {
+    background: #0bd;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 2.5rem;
+
+   p:hover {
+    background: #0090aa;
+    }
+  }
+	
+}
+
+/*-------------------------------------*/
+
