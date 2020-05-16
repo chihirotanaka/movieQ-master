@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+# ユーザークイズ一覧
   def home
-    @quizzes = Quiz.all
-  	@quiz = Quiz.find(params[:id])
+    @quizzes = current_user.quizzes
+    @users = User.all
   end
 
   def edit

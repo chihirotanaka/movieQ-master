@@ -19,13 +19,10 @@
           <td>閲覧数<%= %></td>
           <td>👍<%= "#" %></td>
           <td>👎<%= "#" %></td>
-            <% if @quizzes.user == current_user %>
-          <td><%=link_to "編集　", edit_quiz_path(quiz) %></td>
-          <td><%=link_to "削除　", edit_quiz_path(quiz) %></td>
-              <i class="far fa-edit"></i>
-              <i class="far fa-trash-alt"></i>
-            <% end%>
+          <td><%=link_to "編集",edit_quiz_path(@quizzes), class:"btn btn-success"%></td>
+          <td><%=link_to "削除" ,quiz_path ,method: :delete,
+           "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %></td>
       </tr>
       <% end %>
-    </table>
+    </table><!--quiz-table -->
 </div>

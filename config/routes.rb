@@ -11,13 +11,15 @@ Rails.application.routes.draw do
       resource :favorites, only:[:create, :destroy]
       resource :unfavorites, only:[:create, :destroy]
   end
-  get 'quizzes/:id/quiz' => 'quizzes#quiz'
-  get 'quizzes/:id/result/:anser=1' => 'quizzes#result'
-  get 'quizzes/:id/total' => 'quizzes#total'
+  # game画面
+    get 'playquizzes/:id/quiz' => 'playquizzes#play_quiz' ,as: :play_quiz
+    get 'playquizzes/:id/result/:anser=1' => 'playquizzes#result_quiz' ,as: :result_quiz
+    get 'playquizzes/:id/total' => 'playquizzes#total_quiz' ,as: :total_quiz
 
 
   # 管理
   devise_for :admins, skip: :all
+  root 'admins/movies#index'
   devise_scope :admin do
     get 'admins/sign_in' => 'admins/sessions#new' , as: :new_admin_session
     post  'admins/sign_in' => 'admins/sessions#create' ,  as: :admin_session

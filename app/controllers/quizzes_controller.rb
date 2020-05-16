@@ -1,17 +1,18 @@
 class QuizzesController < ApplicationController
-before_action :set_quiz, only: [:quiz, :result, :total]
 
-# サイトtopページ(aboutを兼務)
-  def index
+# サイトtopページ(+about)
+# アクティブを検索しないと消されたクイズも入ってします。
+# 
+  def top
+    @quiz = Quiz.find(Quiz.all.pluck(:id).sample(1))
   end
 
-# クイズ制作ページ
+# ユーザークイズ作成ページ
   def new
     @newquiz = Quiz.new
     @movies = Movie.all
     @themes = Theme.all
     @movietheme = Movie.where(theme_id: params[:theme_id])
-    # @Themes = Movie.theme.theme
   end
 
   def create
@@ -25,7 +26,7 @@ before_action :set_quiz, only: [:quiz, :result, :total]
   end
 
   def edit
-    @quizzes = movie.quizzes.all
+    @quizzes = Quiz.all
   end
 
   def update
@@ -33,29 +34,18 @@ before_action :set_quiz, only: [:quiz, :result, :total]
   end
 
   def destroy
-    @quizzes = Quiz.find(params)
-    if @quiz
-    @quiz.destroy
-    redirect_to user_home_path(current_user)
+       @quizzes = Quiz.find(params[:id])
+    if @quizzes.destroy
+       redirect_to user_home_path(current_user)
+    else
+      render 'back'
+    end
   end
-
-# クイズ画面
-  def quiz
-  end
-
-  def result
-  end
-
-  def total
-  end
+ 
 
   private
   def post_quiz_params
     params.require(:quiz).permit(:user_id, :theme_id, :movie_id,
      :question, :emoji, :emoji2, :emoji3, :answer, :answer2, :answer3)
-  end
-
-  def set_quiz
-    @quiz = Quiz.find(params[:id])
   end
 end

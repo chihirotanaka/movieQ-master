@@ -17,16 +17,12 @@
           <% if user_signed_in? %>
               <li><%= link_to " Home", user_home_path(current_user), class: "#" %></li>
               <li><%= link_to " クイズをつくる", new_quiz_path, class: "#" %></li>
-              <li><%= link_to " 挑戦", "#", class: "#" %></li>
+              <li><%= link_to " 挑戦", "play_quiz_path(@quiz)", class: "#" %></li>
               <li> <%= link_to " ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "#" %></li>
-    <!--管理サインイン時　-->
-          <% elsif admin_signed_in? %>
-              <li><%= link_to " TOP画面" , admins_movies_path ,  class: "#"%></li>
-              <li> <%= link_to " 管理者ログアウト" , destroy_admin_session_path ,method: :delete , class: "#" %></li>
     <!--ユーザーサインアウト時　-->
           <% else %>
               <li><%= link_to " このサイトについて", "#about", class: "#" %></li>
-              <li><%= link_to " 挑戦", "#", class: "#" %></li>
+              <li><%= link_to " 挑戦", "play_quiz_path(@quiz)", class: "#" %></li>
               <li><%= link_to " 新規登録", new_user_registration_path, class: "#" %></li>
               <li><%= link_to " ログイン", new_user_session_path, class: "#" %></li>
             <% end %>
