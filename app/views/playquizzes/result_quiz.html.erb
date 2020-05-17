@@ -1,1 +1,22 @@
-<h1>クイズ○×</h1>
+<h1>クイズ結果</h1>
+
+<p class="result"></p>
+	<%= @quiz.result %>
+　　<p>正解は<%= @quiz.answer %>でした！</p>
+
+<div id="movie-column">
+	<h4><strong>クイズに出てきた作品は..</strong></h4>
+
+	<%= attachment_image_tag @movie, :image, :fill, 80, 80, format: 'jpeg', class: "rounded pull-left movie-img", fallback: "#" %>
+
+    		制作年
+		 <%= @movie.year %>年<br />
+        タイトル
+		 <%= @movie.title %><br />
+        コラム
+		<%= @movie.column %><br />
+</div>
+<br />
+  <%= form_tag play_quiz_path, method: :get do %>
+    	<%= submit_tag '次へ', class: "btn btn-info" %>
+  <% end %>

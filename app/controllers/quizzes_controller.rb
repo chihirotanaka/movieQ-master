@@ -1,8 +1,8 @@
 class QuizzesController < ApplicationController
 
 # サイトtopページ(+about)
-# アクティブを検索しないと消されたクイズも入ってします。
-# 
+# activeを検索しないと消されたクイズも入ってしまう？
+
   def top
     @quiz = Quiz.find(Quiz.all.pluck(:id).sample(1))
   end

@@ -1,20 +1,18 @@
 Rails.application.routes.draw do
 
-  namespace :admins do
-  end
   # ユーザー
   devise_for :users
   root 'quizzes#top'
   get 'users/:id/home'=>'users#home', as: :user_home
   resources :users, only:[:edit, :update, :destroy]
   resources :quizzes, only:[:new, :create, :edit, :update, :destroy] do
-      resource :favorites, only:[:create, :destroy]
-      resource :unfavorites, only:[:create, :destroy]
+    resource :favorites, only:[:create, :destroy]
+    resource :unfavorites, only:[:create, :destroy]
   end
   # game画面
-    get 'playquizzes/:id/quiz' => 'playquizzes#play_quiz' ,as: :play_quiz
-    get 'playquizzes/:id/result/:anser=1' => 'playquizzes#result_quiz' ,as: :result_quiz
-    get 'playquizzes/:id/total' => 'playquizzes#total_quiz' ,as: :total_quiz
+  get 'playquizzes/quiz' => 'playquizzes#play_quiz' ,as: :play_quiz
+  get 'playquizzes/result' => 'playquizzes#result_quiz' ,as: :result_quiz
+  get 'playquizzes/total' => 'playquizzes#total_quiz' ,as: :total_quiz
 
 
   # 管理

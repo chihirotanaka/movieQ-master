@@ -1,1 +1,11 @@
 <h1>クイズ結果</h1>
+
+
+<h1>5問中<%= settion[:result].count(true) %>問正解でした！</h1>
+<%= "○:×:×:○:×"%><br />
+<!-- 5つの結果を取得
+	if result? ="○","×" で表示-->
+
+
+<%=link_to"もう1度挑戦！", play_quiz_path, class:"btn btn-warning" %>
+<%=link_to"シェアする", "#", class:"btn btn-info" %>
