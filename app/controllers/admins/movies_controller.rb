@@ -1,11 +1,11 @@
 class Admins::MoviesController < ApplicationController
   before_action :authenticate_admin!
-  
+
   layout 'admin'
 
   def index
   	@newmovie = Movie.new
-  	@movies = Movie.all
+  	@movies = Movie.all.page(params[:page]).per(5)
     @themes = Theme.all
   end
 

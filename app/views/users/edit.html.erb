@@ -1,1 +1,11 @@
-<h1>ユーザー情報編集</h1>
+<section id="edit">
+
+  <h3>ユーザー情報変更</h3>
+
+  <%= render "users/form", user: @user %>
+  <%= link_to "退会する",user_registration_path(current_user), method: :delete, class: "btn btn-danger col-xs-12 user-delete",
+      "data-confirm" => "※退会すると情報が全て消去されます。本当に退会してよろしいですか？" %>
+
+</section>
+
+

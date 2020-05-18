@@ -13,6 +13,11 @@ Admin.create(
 	)
 
 # user pass
+User.create!(
+	email: "1@1",
+	name: "01"
+	password: "111111"
+	)
 
 # theme
 ["---","アメリカ映画TOP5", "日本映画TOP5", "ジブリ映画TOP5", "今話題の5作品"].each do |t|

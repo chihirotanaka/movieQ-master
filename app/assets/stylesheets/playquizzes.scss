@@ -4,8 +4,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
+@import "font-awesome";
 
 
 #quiz-wrapper {
@@ -14,7 +13,7 @@
 	height: 100vh;
 }
 
-/*quiz画面 
+/*quiz画面
 --------------------------------*/
 #quiz-container {
 	text-align: center;
@@ -51,12 +50,12 @@
 
   p {
     font-size: 2rem;
-  }	
+  }
 }
 
 /* 選択肢 */
 .answer-box {
-  margin-top:18px; 
+  margin-top:18px;
 
   p {
     background: #0bd;
@@ -68,7 +67,7 @@
     background: #0090aa;
     }
   }
-	
+
 }
 
 /*-------------------------------------*/

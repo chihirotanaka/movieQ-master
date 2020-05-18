@@ -15,8 +15,16 @@
 		 <%= @movie.title %><br />
         コラム
 		<%= @movie.column %><br />
-</div>
-<br />
-  <%= form_tag play_quiz_path, method: :get do %>
-    	<%= submit_tag '次へ', class: "btn btn-info" %>
-  <% end %>
+</div><br />
+
+  <!--  もしquiz_numの数が5なら
+        結果は..ボタンを表示する
+　　　　　違うなら次へボタンを表示する-->
+
+    		<%= form_tag total_quiz_path, method: :get do %>
+    			<%= submit_tag '結果は..', class: "btn btn-danger button" %>
+    		<% end %>
+
+    		<%= form_tag play_quiz_path, method: :get do %>
+    			<%= submit_tag '次へ', class: "btn btn-info button" %>
+    		<% end %>

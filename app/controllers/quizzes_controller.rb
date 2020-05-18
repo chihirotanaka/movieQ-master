@@ -26,7 +26,7 @@ class QuizzesController < ApplicationController
   end
 
   def edit
-    @quizzes = Quiz.all
+    @quiz = Quiz.find(params[:id])
   end
 
   def update
@@ -41,7 +41,6 @@ class QuizzesController < ApplicationController
       render 'back'
     end
   end
- 
 
   private
   def post_quiz_params

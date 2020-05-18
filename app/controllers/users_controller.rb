@@ -8,18 +8,22 @@ class UsersController < ApplicationController
   end
 
   def edit
-  	@quiz = Quiz.find(params[:id])
+  	@user = User.find(params[:id])
   end
 
   def update
-  	@user = curent_user.all
-  	@user.update
-  	redirect_to edit_user_path
+  	@user = User.find(params[:id])
+    if @user == current_user
+  	   @user.update
+  	   redirect_to edit_user_path(current_user)
+    else
+       render 'root_path'
+    end
   end
 
   def destroy
-  	@user = curent_user.all
-  	@user.delete
+  	@user = current_user
+  	@user.destroy
   	redirect_to root_path
   end
 end

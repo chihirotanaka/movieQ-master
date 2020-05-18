@@ -35,17 +35,20 @@
       <tr>
           <td><%= attachment_image_tag movie, :image, :fill, 50, 50, format:"jpg", class: "img-circle pull-left" %></td>
           <td>
-            <%=link_to movie.title, edit_admins_movie_path(movie.id) %>
+            <%=link_to movie.title, edit_admins_movie_path(movie) %>
           </td>
           <td><%= movie.column %></td>
           <td><%= movie.year %></td>
           <td><%= movie.theme.theme %></td>
           <td>
-            <%= link_to '編集', edit_admins_movie_path(movie.id),class: "label label-success " %>
-            <%= link_to '削除', admins_movie_path(movie.id),class: "label label-danger", method: :delete, data: {confirm: "削除しますか？"} %>
+            <%= link_to '編集', edit_admins_movie_path(movie),class: "label label-success " %>
+            <%= link_to '削除', admins_movie_path(movie),class: "label label-danger", method: :delete, data: {confirm: "削除しますか？"} %>
           </td>
       </tr>
       <% end %>
     </table>
+    <div class="text-center">
+        <%= paginate @movies %>
+    </div>
   </div>
 </div>
