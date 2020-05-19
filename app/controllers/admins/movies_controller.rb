@@ -5,8 +5,9 @@ class Admins::MoviesController < ApplicationController
 
   def index
   	@newmovie = Movie.new
-  	@movies = Movie.all.page(params[:page]).per(5)
+  	@movies = Movie.all
     @themes = Theme.all
+    # .page(params[:page]).per(5)
   end
 
   def create
@@ -14,8 +15,7 @@ class Admins::MoviesController < ApplicationController
     @movies = Movie.all
     @themes = Theme.all
     if @newmovie.save
-       redirect_to  admins_movies_path
-       flash[:notice] = "作品を登録しました!!"
+       redirect_to  admins_movies_path, notice: "作品を登録しました!!"
     else
       render 'index'
     end
@@ -23,10 +23,18 @@ class Admins::MoviesController < ApplicationController
 
   def edit
   	@movie =Movie.find(params[:id])
+    @movies = Movie.all
+    @themes = Theme.all
+    @themes = Theme.all
   end
 
   def update
   	@movie =Movie.find(params[:id])
+    if @movie.update(movie_params)
+       redirect_to admins_movies_path, notice: "変更しました！"
+    else
+       render root_path
+    end
   end
 
   def destroy

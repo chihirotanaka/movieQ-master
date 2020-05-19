@@ -1,15 +1,26 @@
-<h1>クイズ結果</h1>
+<div id="totalbox">
+  <h1 class="total-title">クイズ結果</h1>
+
+	<div class="total-result">
+		<h2>5問中<%= session[:result].count(true) %>問正解でした！</h2>
+		<% session[:result].each do |result| %>
+		<span class="total"><%= result ? '○' : '×' %></span>
+		 <% end %>
+	</div>
+
+<!--
+		<%= @movie.title %>
+		<%= session[:quizzes_id].each do |id| %>
+		   @movies = Quiz.find(params[:id])
+		   <%= id %>
+		<% end %> -->
+
+		<!-- 5つの結果を取得if result? ="○","×" で表示-->
 
 
-<h1>5問中<%= session[:result].count(true) %>問正解でした！</h1>
-<%= "○:×:×:○:×"%><br />
-<!-- 5つの結果を取得
-	if result? ="○","×" で表示-->
+	<div class="total-button"><br />
+		<%=link_to"もう1度挑戦！", play_quiz_path, class:"btn btn-warning" %>
+		<%=link_to"TOPへ", "/", class:"btn btn-info" %><br />
+	</div><!--total-button-->
 
-  <%= session[:result].each do |result| %>
-	<%= result.true? '正解': '不正解' %>
-  <% end %>
-
-
-<%=link_to"もう1度挑戦！", play_quiz_path, class:"btn btn-warning" %>
-<%=link_to"シェアする", "#", class:"btn btn-info" %>
+</div>

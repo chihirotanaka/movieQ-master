@@ -1,12 +1,10 @@
 <h2>クイズ一覧</h2>
 <!-- クイズ一覧 -->
 <div class="element">
-    <table class="table table-default">
+  <table class="table table-default">
       <tr>
         <th>絵文字😄</th>
         <th>Question</th>
-        <th>閲覧数</th>
-        <th colspan="2">評価</th>
         <th colspan="2">編集</th>
       </tr>
       <% @quizzes.each do |q| %>
@@ -16,13 +14,13 @@
               <%= q.emoji3%>
           </td>
           <td><%= q.question%></td>
-          <td>閲覧数<%= %></td>
-          <td>👍<%= "#" %></td>
-          <td>👎<%= "#" %></td>
-          <td><%=link_to "編集",edit_quiz_path(@quizzes), class:"btn btn-success"%></td>
-          <td><%=link_to "削除" ,quiz_path ,method: :delete,
-           "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %></td>
+          <td>
+            <%=link_to "編集",edit_quiz_path(@quizzes), class:"btn btn-success"%>
+            <%=link_to "削除" ,quiz_path ,method: :delete,
+           "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %>
+          </td>
       </tr>
       <% end %>
-    </table><!--quiz-table -->
+
+  </table><!--quiz-table -->
 </div>

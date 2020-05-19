@@ -13,37 +13,32 @@
       <h1><a href="/">movieQ</a></h1>
       <nav>
           <ul class="main-nav">
-    <!--ユーザーサインイン時　-->
-          <% if user_signed_in? %>
-              <li><%= link_to " Home", user_home_path(current_user), class: "#" %></li>
-              <li><%= link_to " クイズをつくる", new_quiz_path, class: "#" %></li>
-              <li><%= link_to " 挑戦", play_quiz_path, class: "#" %></li>
-              <li>
-                <%= link_to(edit_user_path(current_user)) do %>
-                <i class="fa fa-cog fa-lg "></i>
-                <% end %>
-              </li>
-              <li> <%= link_to " ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "#" %></li>
-    <!--ユーザーサインアウト時　-->
-          <% else %>
-              <li><%= link_to " このサイトについて", "#about", class: "#" %></li>
-              <li><%= link_to " 挑戦", play_quiz_path, class: "#" %></li>
-              <li><%= link_to " 新規登録", new_user_registration_path, class: "#" %></li>
-              <li><%= link_to " ログイン", new_user_session_path, class: "#" %></li>
-            <% end %>
-          </ul>
+      <!--ユーザーサインイン時　-->
+            <% if user_signed_in? %>
+                <li><%= link_to " Home", user_home_path(current_user), class: "#" %></li>
+                <li><%= link_to " クイズをつくる", new_quiz_path, class: "#" %></li>
+                <li><%= link_to " 挑戦", play_quiz_path, class: "#" %></li>
+                <li><%= link_to " 設定", edit_user_path(current_user), class: "#" %></li>
+                <li> <%= link_to " ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "#" %></li>
+      <!--ユーザーサインアウト時　-->
+            <% else %>
+                <li><%= link_to " このサイトについて", "#about", class: "#" %></li>
+                <li><%= link_to " 挑戦", play_quiz_path, class: "#" %></li>
+                <li><%= link_to " 新規登録", new_user_registration_path, class: "#" %></li>
+                <li><%= link_to " ログイン", new_user_session_path, class: "#" %></li>
+              <% end %>
+          </ul><!--main-nav-->
         </nav>
-      </div>
-    </header>
-    <body>
+    </header><!--all-header wrapper-->
+  <body>
       <div id="wrapper">
-      <div class="home-content wrapper">
-      <main><%= yield %></main>
-      </div>
+          <div class="home-content wrapper">
+             <%= yield %>
+          </div>
 <!-- footer -->
-      <footer>
-        <p class="text">©2020 Presented by movieQ.</p>
-      </footer>
-    </div>
+          <footer>
+            <p class="text">2020 Presented by movieQ.</p>
+          </footer>
+      </div>
   </body>
 </html>

@@ -9,32 +9,30 @@
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
-    <header class="all-header wrapper">
-        <h3><a href="/admins/movies">管理ページ</a></h3>
+  <header class="all-header wrapper">
         <nav>
           <ul class="main-nav">
-
-		        <% if admin_signed_in? %>
-   			        <li><%= link_to " TOP画面" , admins_movies_path ,  class: "#"%></li>
-  			       <li> <%= link_to " 管理者ログアウト" , destroy_admin_session_path ,method: :delete , class: "#" %></li>
-		        <% end %>
-          </ul>
+  		        <% if admin_signed_in? %>
+     			      <li><%= link_to " TOP画面" , admins_movies_path ,  class: "#"%></li>
+    			      <li> <%= link_to " 管理者ログアウト" , destroy_admin_session_path ,method: :delete , class: "#" %></li>
+  		        <% end %>
+          </ul><!--main-nav-->
         </nav>
   </header><!--all header wrapper-->
 
   <body>
     <div id="wrapper">
       <div class="home-content wrapper">
+        <p id="notice"><%= notice %></p>
       		<main>
       			<%= yield %>
       		</main>
       </div><!--home-content wrapper -->
 
-<!-- footer
- ---------------->
+<!-- footer---------------->
       <footer>
-        <p class="text">©2020 Presented by movieQ.</p>
+        <p class="text">2020 Presented by movieQ.</p>
       </footer>
-    </div><!--wrapper -->
+    </div>
   </body>
 </html>

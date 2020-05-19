@@ -2,9 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.wrapper{
+
+#movie .wrapper{
     display: flex;
+    align-items: center;
+}
+.element1, .element2 {
+	margin-top: 45px;
+}
+.element1 {
+	width: 28%;
 }
 .element2 {
-	margin: 24px 0;
+	width: 68%;
 }

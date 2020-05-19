@@ -14,16 +14,22 @@ class UsersController < ApplicationController
   def update
   	@user = User.find(params[:id])
     if @user == current_user
-  	   @user.update
-  	   redirect_to edit_user_path(current_user)
+  	   @user.update(user_params)
+  	   redirect_to edit_user_path(@user), notice: "変更できました！"
     else
        render 'root_path'
     end
   end
 
   def destroy
-  	@user = current_user
+    @user = User.find(params[:id])
+  	@user == current_user
   	@user.destroy
   	redirect_to root_path
+  end
+
+  private
+    def user_params
+      params.require(:user).permit(:name, :email, :password)
   end
 end

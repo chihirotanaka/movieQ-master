@@ -1,0 +1,26 @@
+<table class="table table-default">
+    <tr>
+      <th>画像</th>
+      <th>作品名</th>
+      <th>コラム</th>
+      <th>制作年</th>
+      <th>お題</th>
+      <th colspan="2"></th>
+    </tr>
+    <% movies.each do |movie| %>
+      <tr>
+          <td><%= attachment_image_tag movie, :image, :fill, 50, 50, format:"jpg", class: "img-circle pull-left" %>
+          </td>
+          <td>
+            <%=link_to movie.title, edit_admins_movie_path(movie) %>
+          </td>
+          <td><%= movie.column %></td>
+          <td><%= movie.year %></td>
+          <td><%= movie.theme.theme %></td>
+          <td>
+            <%= link_to '編集', edit_admins_movie_path(movie),class: "label label-success " %>
+            <%= link_to '削除', admins_movie_path(movie),class: "label label-danger", method: :delete, data: {confirm: "削除しますか？"} %>
+          </td>
+      </tr>
+    <% end %>
+</table>

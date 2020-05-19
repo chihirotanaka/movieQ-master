@@ -1,8 +1,6 @@
 class QuizzesController < ApplicationController
 
 # サイトtopページ(+about)
-# activeを検索しないと消されたクイズも入ってしまう？
-
   def top
     @quiz = Quiz.find(Quiz.all.pluck(:id).sample(1))
   end
@@ -19,7 +17,7 @@ class QuizzesController < ApplicationController
     @newquiz = Quiz.new(post_quiz_params)
     @newquiz.user_id = current_user.id
     if @newquiz.save
-    redirect_to user_home_path(current_user)
+    redirect_to user_home_path(current_user), notice: "作成しました！"
     else
     render 'back'
     end
@@ -30,7 +28,13 @@ class QuizzesController < ApplicationController
   end
 
   def update
-    @quiz.update
+    @quiz = Quiz.find(params[:id])
+    if @quiz.user_id == current_user.id
+       @quiz.update(post_quiz_params)
+       redirect_to user_home_path(current_user)
+    else
+       render root_path
+    end
   end
 
   def destroy

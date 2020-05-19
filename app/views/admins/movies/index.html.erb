@@ -1,54 +1,15 @@
-<div class="wrapper">
-  <div class="element1">
 
-    <h2>movie情報作成</h2>
-    <%= form_for(@newmovie, url: admins_movies_path, method: :post) do |f| %>
+<section id="movie">
+    <div class="wrapper">
+      <div class="element1">
 
-    <label>画像</label><br />
-    <%= f.attachment_field :image %>
-    <label>お題</label><br />
-    <%= f.collection_select :theme_id, @themes, :id, :theme %><br />
-    <label>制作年</label><br />
-    <%= f.select :year, Movie.years.keys, :selected=>Movie.years[@newmovie.year] %><br />
-    <label>タイトル</label><br />
-    <%= f.text_field :title %><br />
-    <label>コラム</label><br />
-    <%= f.text_area :column %><br />
-    <%= f.submit '作成'%><br />
+        <h2>movie情報作成</h2>
+          <%= render 'admins/movies/form', movie: @newmovie %>
+        </div>
 
-  <% end %>
-
-  </div>
-
-<div class="element2">
-<!--  映画情報一覧 -->
-    <table class="table table-default">
-      <tr>
-        <th>画像</th>
-        <th>作品名</th>
-        <th>コラム</th>
-        <th>制作年</th>
-        <th>お題</th>
-        <th colspan="2"></th>
-      </tr>
-      <% @movies.each do |movie| %>
-      <tr>
-          <td><%= attachment_image_tag movie, :image, :fill, 50, 50, format:"jpg", class: "img-circle pull-left" %></td>
-          <td>
-            <%=link_to movie.title, edit_admins_movie_path(movie) %>
-          </td>
-          <td><%= movie.column %></td>
-          <td><%= movie.year %></td>
-          <td><%= movie.theme.theme %></td>
-          <td>
-            <%= link_to '編集', edit_admins_movie_path(movie),class: "label label-success " %>
-            <%= link_to '削除', admins_movie_path(movie),class: "label label-danger", method: :delete, data: {confirm: "削除しますか？"} %>
-          </td>
-      </tr>
-      <% end %>
-    </table>
-    <div class="text-center">
-        <%= paginate @movies %>
+      <div class="element2">
+      <!--  映画情報一覧 -->
+          <%= render 'admins/movies/movie-table', movies: @movies %>
+      </div>
     </div>
-  </div>
-</div>
+</section>

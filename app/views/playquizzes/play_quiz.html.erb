@@ -1,4 +1,4 @@
-<div id="quiz-container">
+<div id="playbox">
 
 	<div class="title-box">
 		<p><strong>第<%= session[:quiz_num]+1 %>問</strong></p>
@@ -22,10 +22,10 @@
 
     <div class="answer-box">
     	<%= form_tag result_quiz_path, method: :get do %>
-    	<%= submit_tag @quiz.answer, name:"choice", class: "answer-button" %>
-    	<%= submit_tag @quiz.answer2, name:"choice", class: "answer-button" %>
-    	<%= submit_tag @quiz.answer3, name:"choice", class: "answer-button" %>
+    		<% @options.each do |option| %>
+    			<%= submit_tag option, name:"choice", class: "answer-button" %>
+    		<% end %>
     	<% end %>
 	</div>
 
-</div><!---quiz-container--->
+</div><!---playbox--->

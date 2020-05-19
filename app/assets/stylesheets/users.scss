@@ -2,32 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
-
-
-
-
-
-
 /*edit
 -------------------------*/
 
 #edit {
+  background-color: #ccc;
 
   h3 {
     margin: 49px 0 22px 22px;
   }
 }
 .user-delete {
-    margin-top: 5px;
+    margin-top: 3px;
   }
 
-
 .user-name,.user-email {
-    height: 30px;
-    margin-bottom: 13px;
+    height: 28px;
+    margin-bottom: 10px;
     border-radius: 5px;
   }
 

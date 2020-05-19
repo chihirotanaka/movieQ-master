@@ -18,6 +18,7 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
 body,
 #wrapper {
   display: flex;
@@ -28,7 +29,6 @@ body,
     text-decoration: none;
   }
 }
-
 /*header
 ---------------------------*/
 .all-header {
@@ -39,13 +39,11 @@ body,
   margin-top: auto;
   text-decoration: none;
 }
-
-.wrapper{
+.wrapper {
   maxwidth: 1100px;
   margin: 0 auto;
   padding: 0 4%;
 }
-
 /*nav
 ---------------------------*/
 .main-nav {
@@ -60,9 +58,11 @@ body,
 
   a {
     color: #333;
+    text-decoration: none;
   }
+
   a:hover {
-    color: red;
+    color: orangered;
   }
 }
 /*main
@@ -71,7 +71,6 @@ body,
   color: #333;
   text-decoration: none;
 }
-
 /*footer
 ---------------------------*/
 footer {

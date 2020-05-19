@@ -1,16 +1,15 @@
+<%= form_for(movie, url: admins_movies_path) do |f| %>
 
-  <%= form_for(movie, url: admins_movies_path, method: :post) do |f| %>
-
-    <p>画像</p>
+    <label>画像</label><br />
     <%= f.attachment_field :image %>
-    <p>お題</p>
-    <%= f.select :theme_title, Movie.theme_titles_i18n.keys.map {|k| [I18n.t("enums.movie.theme_title.#{k}"), k]} %><br />
-    <p>制作年</p>
-    <%= f.select :year, Movie.years.keys, :selected=>Movie.years[movie.year] %>
-    <p>タイトル</p>
-    <%= f.text_field :title %>
-   	<p>コラム</p>
-    <%= f.text_area :column %>
-  	<%= f.submit '作成'%>
+    <label>お題</label><br />
+    <%= f.collection_select :theme_id, @themes, :id, :theme %><br />
+    <label>制作年</label><br />
+    <%= f.select :year, Movie.years.keys, :selected=>Movie.years[movie.year] %><br />
+    <label>タイトル</label><br />
+    <%= f.text_field :title %><br />
+    <label>コラム</label><br />
+    <%= f.text_area :column %><br />
+    <%= f.submit '作成'%><br />
 
-  <% end %>
+<% end %>
