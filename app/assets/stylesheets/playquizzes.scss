@@ -16,7 +16,7 @@
 
 #playbox,#resultbox,#totalbox {
   max-width: 1100px;
-  width: 70%;
+  width: 60%;
   height: 600px;
   margin: 0 auto;
   background-color: white;
@@ -116,27 +116,26 @@
       .title {
         padding: 5px;
         font-size: 1.5rem;
-        border-bottom: solid 1px powderblue;
-        background-color: white;
+        border: solid 1.3px orangered;
+        background-color: darkred;
+        color: white;
       }
   }
 
   .moviebox {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         width: auto;
         height: 300;
         background: white;
-        border-bottom: solid 1px powderblue;
 
       .jadge {
         color: orangered;
-        font-size: 80px;
-        font-weight: bold;
-
+        font-size: 70px;
       }
       p {
-          color: gray;
-          font-size: 16px;
+          font-size: 12px;
       }
   }
 }

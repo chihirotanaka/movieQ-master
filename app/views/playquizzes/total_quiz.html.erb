@@ -2,7 +2,7 @@
   <p class="total-title">クイズ結果</p>
 
 	<div class="total-result">
-			<h2><%= session[:result].count(true) %>問正解です！</h2>
+			<h2>5問中<%= session[:result].count(true) %>問正解でした!</h2>
 
 			<!-- 判定 -->
 			<% if session[:result].count(true) == 0 %>
@@ -37,7 +37,9 @@
 		<%=link_to"TOPへ", "/", class:"btn btn-info" %>
 		<div class="twitter">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-primary" data-text="【クイズ結果】5問中<%= session[:result].count(true) %>問正解でした！&#13;&#10;&#13;&#10;" data-url="http://localhost:3000" data-hashtags="movieQ" data-lang="ja" data-show-count="false" data-size="large">Tweet</a>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div><!--twitter-->
 	</div><!--total-button-->
 </div><!--total-box-->
+
+<!--twitter script-->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
