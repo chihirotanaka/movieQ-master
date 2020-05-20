@@ -10,22 +10,22 @@
   </head>
 <!-- header -->
   <header class="all-header wrapper">
-      <h1><a href="/">movieQ</a></h1>
+      <h1><a class="logo" href="/">movieQ</a></h1>
       <nav>
           <ul class="main-nav">
       <!--ユーザーサインイン時　-->
             <% if user_signed_in? %>
-                <li><%= link_to " Home", user_home_path(current_user), class: "#" %></li>
-                <li><%= link_to " クイズをつくる", new_quiz_path, class: "#" %></li>
-                <li><%= link_to " 挑戦", play_quiz_path, class: "#" %></li>
-                <li><%= link_to " 設定", edit_user_path(current_user), class: "#" %></li>
-                <li> <%= link_to " ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "#" %></li>
+                <li><%= link_to " Home", user_home_path(current_user), class: "nav" %></li>
+                <li><%= link_to " クイズをつくる", new_quiz_path, class: "nav" %></li>
+                <li><%= link_to " 挑戦", play_quiz_path, class: "nav" %></li>
+                <li><%= link_to " 設定", edit_user_path(current_user), class: "nav" %></li>
+                <li> <%= link_to " ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: "nav" %></li>
       <!--ユーザーサインアウト時　-->
             <% else %>
-                <li><%= link_to " このサイトについて", "#about", class: "#" %></li>
-                <li><%= link_to " 挑戦", play_quiz_path, class: "#" %></li>
-                <li><%= link_to " 新規登録", new_user_registration_path, class: "#" %></li>
-                <li><%= link_to " ログイン", new_user_session_path, class: "#" %></li>
+                <li><%= link_to " このサイトについて", "#about", class: "nav" %></li>
+                <li><%= link_to " 挑戦", play_quiz_path, class: "nav" %></li>
+                <li><%= link_to " 新規登録", new_user_registration_path, class: "nav" %></li>
+                <li><%= link_to " ログイン", new_user_session_path, class: "nav" %></li>
               <% end %>
           </ul><!--main-nav-->
         </nav>

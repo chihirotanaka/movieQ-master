@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-
+  root 'quizzes#top'
   # ユーザー
   devise_for :users
-  root 'quizzes#top'
   get 'users/:id/home'=>'users#home', as: :user_home
   resources :users, only:[:edit, :update, :destroy]
   resources :quizzes, only:[:new, :create, :edit, :update, :destroy] do

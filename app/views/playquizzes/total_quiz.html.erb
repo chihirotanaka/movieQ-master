@@ -2,25 +2,49 @@
   <h1 class="total-title">クイズ結果</h1>
 
 	<div class="total-result">
-		<h2>5問中<%= session[:result].count(true) %>問正解でした！</h2>
-		<% session[:result].each do |result| %>
-		<span class="total"><%= result ? '○' : '×' %></span>
-		 <% end %>
-	</div>
+		<h2><%= session[:result].count(true) %>問正解です！</h2>
+		<!-- 判定 -->
+		<% if session[:result].count(true) == 0 %>
+		    <p class="title">あなたの物語はこれから</p>
+		<% elsif session[:result].count(true) == 1 %>
+		　  <p class="title">⭐️冒険のはじまり</p>
+	    <% elsif session[:result].count(true) == 2 %>
+	        <p class="title">⭐️⭐️movie修行中</p>
+		<% elsif session[:result].count(true) == 3 %>
+		   <p class="title">⭐️⭐️⭐️オールジャンルをめざせ🎬</p>
+		<% elsif session[:result].count(true) == 4 %>
+		   <p class="title">⭐️⭐️⭐️⭐️輝くmovieスター💃</p>
+		<% elsif session[:result].count(true) == 5 %>
+		   <p class="title">⭐️⭐️⭐️⭐️⭐️すばらしい！あなたがmovie王！！👑</p>
+    <% end %>
 
-<!--
-		<%= @movie.title %>
-		<%= session[:quizzes_id].each do |id| %>
-		   @movies = Quiz.find(params[:id])
-		   <%= id %>
-		<% end %> -->
+　　<p>知らなかった作品は次の週末に鑑賞しよう!</p>
 
-		<!-- 5つの結果を取得if result? ="○","×" で表示-->
+   <div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div><!--total-result-->
 
 
 	<div class="total-button"><br />
 		<%=link_to"もう1度挑戦！", play_quiz_path, class:"btn btn-warning" %>
-		<%=link_to"TOPへ", "/", class:"btn btn-info" %><br />
+		<%=link_to"TOPへ", "/", class:"btn btn-info" %>
+		<div class="twitter">
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-primary" data-text="【クイズ結果】5問中<%= session[:result].count(true) %>問正解でした！&#13;&#10;&#13;&#10;" data-url="http://localhost:3000" data-hashtags="movieQ" data-lang="ja" data-show-count="false" data-size="large">Tweet</a>
+		</div><!--twitter-->
 	</div><!--total-button-->
-
 </div>
+
+<!--twitter script-->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

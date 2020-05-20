@@ -11,7 +11,11 @@ class PlayquizzesController < ApplicationController
     else
        session[:quiz_num]+= 1
     end
-    @quiz = Quiz.find(session[:quizzes_id][session[:quiz_num]])
+    if session[:quizzes_id].size > session[:quiz_num]
+      @quiz = Quiz.find(session[:quizzes_id][session[:quiz_num]])
+    else
+      @quiz = Quiz.all.shuffle.take(1)
+    end
     @options = [@quiz.answer,@quiz.answer2,@quiz.answer3].shuffle
   end
 
@@ -32,9 +36,7 @@ class PlayquizzesController < ApplicationController
   end
 
   def total_quiz
-    @quiz = Quiz.find(session[:quizzes_id][session[:quiz_num]])
-    @movie = @quiz.movie
-    binding.pry
+    @quizzes = Quiz.where(id: session[:quizzes_id])
   end
 
   private

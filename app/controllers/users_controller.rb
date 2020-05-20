@@ -23,13 +23,12 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-  	@user == current_user
   	@user.destroy
   	redirect_to root_path
   end
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password)
+      params.require(:user).permit(:name, :email)
   end
 end

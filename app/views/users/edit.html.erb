@@ -2,9 +2,9 @@
  <div id="notice"><%= notice %></div>
 
   <h3>ユーザー情報変更</h3>
-
+　<%= current_user.inspect %>
   <%= render "users/form", user: @user %>
-  <%= link_to "退会する",user_registration_path(current_user), method: :delete, class: "btn btn-danger col-xs-12 user-delete",
+  <%= link_to "退会する",user_registration_path, method: :delete, class: "btn btn-danger col-xs-12 user-delete",
       "data-confirm" => "※退会すると情報が全て消去されます。本当に退会してよろしいですか？" %>
 
 </class>
