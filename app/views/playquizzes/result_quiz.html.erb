@@ -9,12 +9,12 @@
     <div id="column">
     	<h4><strong>クイズに出てきた作品は..</strong></h4>
 
-    	<%= attachment_image_tag @movie, :image, :fill, 110, 110, format: 'jpeg', class: "rounded pull-left movie-img", fallback: "#" %>
-      <ul class="movie-text">
-         <li><p><strong>制作年|</strong><%= @movie.year %>年</p></li>
-         <li><p><strong>タイトル|</strong><%= @movie.title %></p></li>
-         <li><p><strong>作品紹介|</strong><%= @movie.column %></p></li>
-      </ul>
+      	<%= attachment_image_tag @movie, :image, :fill, 110, 110, format: 'jpeg', class: "rounded pull-left movie-img", fallback: "#" %>
+        <ul class="movie-text">
+           <li><p><strong>制作年|</strong><%= @movie.year %>年</p></li>
+           <li><p><strong>タイトル|</strong><%= @movie.title %></p></li>
+           <li><p><strong>作品紹介|</strong><%= @movie.column %></p></li>
+        </ul>
     </div>
 
       <% if session[:quiz_num] == 4 %>

@@ -15,7 +15,7 @@
           </td>
           <td><%= q.question%></td>
           <td>
-            <%=link_to "編集",edit_quiz_path(@quizzes), class:"btn btn-success"%>
+            <%=link_to "編集",edit_quiz_path(q), class:"btn btn-success"%>
             <%=link_to "削除" ,quiz_path ,method: :delete,
            "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %>
           </td>

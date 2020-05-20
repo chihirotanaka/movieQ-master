@@ -16,7 +16,7 @@
 			<% elsif session[:result].count(true) == 4 %>
 			   <p class="title">⭐️⭐️⭐️⭐️輝くmovieスター💃</p>
 			<% elsif session[:result].count(true) == 5 %>
-			   <p class="title">⭐️⭐️⭐️⭐️⭐️すばらしい！あなたがmovie王！！👑</p>
+			   <p class="title">⭐️⭐️⭐️⭐️⭐️すばらしい！あなたがmovie王！👑</p>
 	    <% end %>
 
 	　　<p><strong>間違えた作品もチェックしてね!</strong></p>
@@ -36,7 +36,7 @@
 		<%=link_to"もう1度挑戦！", play_quiz_path, class:"btn btn-warning" %>
 		<%=link_to"TOPへ", "/", class:"btn btn-info" %>
 		<div class="twitter">
-			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-primary" data-text="【クイズ結果】5問中<%= session[:result].count(true) %>問正解でした！&#13;&#10;&#13;&#10;" data-url="http://localhost:3000" data-hashtags="movieQ" data-lang="ja" data-show-count="false" data-size="large">Tweet</a>
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-primary" data-text="【movieQ 結果】5問中<%= session[:result].count(true) %>問正解でした！&#13;&#10;&#13;&#10;" data-url="http://localhost:3000" data-hashtags="movieQ" data-lang="ja" data-show-count="false" data-size="large">Tweet</a>
 		</div><!--twitter-->
 	</div><!--total-button-->
 </div><!--total-box-->

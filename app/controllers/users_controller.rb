@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 # ユーザークイズ一覧
   def home
     @quizzes = current_user.quizzes
+    # @quiz = Quiz.find(:quiz_id)
     @users = User.all
   end
 

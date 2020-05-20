@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'users/:id/home'=>'users#home', as: :user_home
   resources :users, only:[:edit, :update, :destroy]
   resources :quizzes, only:[:new, :create, :edit, :update, :destroy] do
-    resource :favorites, only:[:create, :destroy]
-    resource :unfavorites, only:[:create, :destroy]
+    # resource :favorites, only:[:create, :destroy]
+    # resource :unfavorites, only:[:create, :destroy]
   end
   # game画面
   get 'playquizzes/quiz' => 'playquizzes#play_quiz' ,as: :play_quiz
