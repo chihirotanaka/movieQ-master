@@ -1,17 +1,16 @@
-<h2>ログイン</h2>
-<p>メールアドレスとパスワードで</p>
-<p>ログインしてください。</p>
+<h4>ログイン</h4>
+<p><small>メールアドレスとパスワードでログインしてください。</small></p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class="field">
+  <div class="form-group row">
     <%= f.label "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, placefolder:"メールアドレス"%>
+    <%= f.email_field :email, autofocus: true, placefolder:"メールアドレス",class: "form-control col-md-12"%>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= f.label "パスワード" %><br />
-    <%= f.password_field :password, autofocus: true, placefolder:"パスワード"%>
+    <%= f.password_field :password, autofocus: true, placefolder:"パスワード",class: "form-control col-md-12"%>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -22,7 +21,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "ログインする" %>
+    <%= f.submit "ログインする" ,class: "btn btn-primary pull-right col-xl-12"%>
   </div>
 <% end %>
 
