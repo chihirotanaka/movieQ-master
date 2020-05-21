@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MovieQ</title>
+    <title>む〜び〜Q</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,8 +9,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 <!-- header -->
+ <body>
   <header class="header navwrapper">
-      <h1><a class="logo" href="/">movieQ</a></h1>
+      <h1><a class="logo" href="/">む〜び〜Q</a></h1>
       <nav>
           <ul class="main-nav">
       <!--ユーザーサインイン時　-->
@@ -30,7 +31,6 @@
           </ul><!--main-nav-->
         </nav>
     </header><!--all-header wrapper-->
-  <body>
       <div id="wrapper">
           <div class="home-content wrapper">
              <%= yield %>

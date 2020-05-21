@@ -1,30 +1,29 @@
 <div class="top-container">
 	<div class="quiz-top-contents">
-		<h1>movieQ</h1>
+		<h1 class="movieQ">む〜び〜Q</h1>
 		<p>あなたの映像作品の知識をクイズで試そう！<br />
 		ログインするとクイズを作成することができます。</p>
 
-		<%= link_to 'クイズに挑戦する', play_quiz_path, class: "button" %>
+		<p><%= link_to 'クイズに挑戦する', play_quiz_path, class: "button1" %></p>
 	  <% if user_signed_in? %>
-		<%= link_to 'クイズをつくる', new_quiz_path, class: "button" %>
+		<%= link_to 'クイズをつくる', new_quiz_path, class: "button2" %>
 	  <% end %>
 	</div><!-- quiz-top-contant -->
 </div><!-- top-container -->
 
 <div class="about-container" id="about">
-	<div class="item">
-	<h2>movieQについて</h2>
-	<p>このサイトは映画やアニメのクイズを楽しめるサイトです！</p>
+
+	<p>このサイトについて</p>
+	<div class="circle1">
+	<span>movieQについて<br>このサイトは映画やアニメのクイズを楽しめるサイトです！</span>
     </div>
 
-    <div class="item">
-	<h2>できること</h2>
-	<p>[クイズに挑戦する]から5問クイズが出題されます。作品を絵文字から連想して全問正解にチャレンジしてみてください！ログインするとクイズを自分で作成することができます！</p>
+    <div class="circle2">
+	<span>できること<br>[クイズに挑戦する]から5問クイズが出題されます。作品を絵文字から連想して全問正解にチャレンジしてみてください！ログインするとクイズを自分で作成することができます！</span>
     </div>
 
-    <div class="item 3">
-	<h2>クイズをつくろう！</h2>
-	<p>新規登録後、[クイズをつくる]から好きな作品を選んでクイズを作成できます。自分の好きな作品から面白い作品を作りましょう！</p>
+    <div class="circle3">
+	<span>クイズをつくろう！<br>新規登録後、[クイズをつくる]から好きな作品を選んでクイズを作成できます。自分の好きな作品から面白い作品を作りましょう！</span>
     </div>
 
 </div> <!-- about-container -->

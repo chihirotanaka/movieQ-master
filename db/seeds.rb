@@ -23,8 +23,11 @@ User.create!(
 ["---","アメリカ映画TOP5", "日本映画TOP5", "ジブリ映画TOP5", "今話題の5作品"].each do |t|
 	Theme.create!(
 	    theme: t
-	)
+	).movie.create
 end
 # movies
 
 # quizzes
+
+Theme.create(theme: "test").
+Movie.create(title: "test2",theme: theme)

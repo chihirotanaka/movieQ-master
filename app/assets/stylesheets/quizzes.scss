@@ -5,20 +5,23 @@
 /*top-container
 -------------------------------------*/
 .top-container {
-	height: 400px;
 }
 .quiz-top-contents {
     text-align: center;
+    height: 400px;
+    margin-top: 80px;
 
 	h1 {
 		font-size: 8rem;
 		}
 	p{
 		margin: 10px 0 40px;
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 	}
 }
-.button {
+
+
+.button1,.button2 {
 	font-size: 2rem;
 	background: #0bd;
 	color: #fff;
@@ -33,16 +36,33 @@
 /*about-container
 -------------------------------------*/
 .about-container {
-  display: grid;
-  gap: 10px;/*間の間隔*/
-
-.item {
-	background: #0bd;
-
-	&:last-child{
-      margin-bottom: 5px;
+	.dounyu {
+	    color: #0bd;
 	}
 }
+
+.circle1,.circle2,.circle3 {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #0bd;
+
+  span {
+		  position: absolute;
+		  display: inline-block;
+		  left: 0;
+		  top: 50%;
+		  -webkit-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		  width :300px;
+		  text-align:center;
+  }
+}
+
+
+
   h2{
 	/*border-bottom:1px dashed #333;*/
       padding:4px 6px;
@@ -51,7 +71,7 @@
 	/*border-bottom:1px dashed #333;*/
       padding:4px 6px;
   }
-}
+
 
 /*create
 -------------------------------------*/

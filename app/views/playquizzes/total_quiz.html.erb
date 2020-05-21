@@ -2,22 +2,10 @@
   <p class="total-title">クイズ結果</p>
 
 	<div class="total-result">
-			<h2>5問中<%= session[:result].count(true) %>問正解でした!</h2>
+		<!-- 判定 -->
+        <%= render "playquizzes/title" %>
 
-			<!-- 判定 -->
-			<% if session[:result].count(true) == 0 %>
-			    <p class="title">あなたの物語はこれから</p>
-			<% elsif session[:result].count(true) == 1 %>
-			　  <p class="title">⭐️冒険のはじまり</p>
-		    <% elsif session[:result].count(true) == 2 %>
-		        <p class="title">⭐️⭐️movie修行中</p>
-			<% elsif session[:result].count(true) == 3 %>
-			   <p class="title">⭐️⭐️⭐️オールジャンルをめざせ🎬</p>
-			<% elsif session[:result].count(true) == 4 %>
-			   <p class="title">⭐️⭐️⭐️⭐️輝くmovieスター💃</p>
-			<% elsif session[:result].count(true) == 5 %>
-			   <p class="title">⭐️⭐️⭐️⭐️⭐️すばらしい！あなたがmovie王！👑</p>
-	    <% end %>
+			<h2>5問中<%= session[:result].count(true) %>問正解でした!</h2>
 
 	　　<p><strong>間違えた作品もチェックしてね!</strong></p>
 
@@ -25,7 +13,7 @@
 			   	<% session[:result].zip(@quizzes).each do |result, quiz| %>
 			   	  <div class="moviebox-item">
 					     <span class="jadge"><%=result ? '○' : '×' %></span>
-					 	   <%= attachment_image_tag quiz.movie, :image, :fill, 80, 80, format:"jpg", class: "img-thumbnail" %>
+					 	   <%= attachment_image_tag quiz.movie, :image, :fill, 100, 100, format:"jpg", class: "img-circle" %>
 						   <p><%= quiz.movie.title%></p>
 						</div>
 					<% end %>
@@ -33,7 +21,7 @@
 	</div><!--total-result-->
 
 <div class="total-button"><br />
-		<%=link_to"もう1度挑戦！", play_quiz_path, class:"btn btn-warning" %>
+		<%=link_to"リトライ!", play_quiz_path, class:"btn btn-warning" %>
 		<%=link_to"TOPへ", "/", class:"btn btn-info" %>
 		<div class="twitter">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-primary" data-text="【movieQ 結果】5問中<%= session[:result].count(true) %>問正解でした！&#13;&#10;&#13;&#10;" data-url="http://localhost:3000" data-hashtags="movieQ" data-lang="ja" data-show-count="false" data-size="large">Tweet</a>

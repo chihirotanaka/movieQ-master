@@ -19,7 +19,7 @@
   width: 60%;
   height: 600px;
   margin: 0 auto;
-  background-color: white;
+  background-color: gray;
   color: #333;
 }
 
@@ -28,18 +28,17 @@
 
 .title-box {
     margin-top:32px;
-    border-radius: 8px;
     background-color: #333;
 
 	p {
       padding: 18px;
+      text-align: center;
       font-size: 2rem;
       color: #fff;
     }
 }
 
  /* 絵文字 */
-
 .emogi-container {
   display: flex;
   justify-content: center;
@@ -56,22 +55,21 @@
     margin-top: 22px;
 
   p {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      text-align: center;
   }
 }
 
 /* 選択肢 */
-.answer-box {
-  display: grid;
-  margin-top:18px;
+.choice-box {
+  width: auto;
 
   .answer-button {
-      background: #0bd;
+      background: #333;
       color: #fff;
       padding: 18px;
-      border-radius: 8px;
       font-size: 2rem;
-      width: 33%;
+      width: 100%;
 
    &:hover {
         background: #0090aa;
@@ -80,11 +78,21 @@
 }
 /*result画面
 -----------------------------*/
-#column {
-  height: 100px;
-  backgroung-color: #0bd;
+.result-column {
+  margin: 0 auto;
+  width: 70%;
+  height: 137px;
+  background: white;
+  margin-bottom: 20px;
 
-  movie-text {
+  ul,li {
+      list-style-type: none;
+  }
+  .movie-img{
+    paddhing: 5px;
+  }
+
+  .movie-text {
       margin: 0 10px 0 0;
 
     p {
@@ -113,13 +121,13 @@
       border: solid 1px powderblue;
       border-radius: 5px;
 
-      .title {
-        padding: 5px;
-        font-size: 1.5rem;
-        border: solid 1.3px orangered;
-        background-color: darkred;
-        color: white;
-      }
+        .title {
+          padding: 5px;
+          font-size: 1.5rem;
+          border: solid 1.3px orangered;
+          background-color: darkred;
+          color: white;
+        }
   }
 
   .moviebox {
@@ -132,7 +140,7 @@
 
       .jadge {
         color: orangered;
-        font-size: 70px;
+        font-size: 30px;
       }
       p {
           font-size: 12px;

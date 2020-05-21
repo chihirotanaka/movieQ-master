@@ -1,6 +1,7 @@
 <div id="playbox">
 	<div class="title-box">
 		<p><strong>第<%= session[:quiz_num]+1 %>問</strong></p>
+		<p>絵文字から作品をイメージして答えよう！</p>
 	</div>
 
 	<div class="emogi-container">
@@ -19,10 +20,10 @@
 		<p>Q:<%= @quiz.question %></p>
 	</div>
 
-    <div class="answer-box">
+    <div class="choice-box">
     	<%= form_tag result_quiz_path, method: :get do %>
-    		<% @options.each do |option| %>
-    			<%= submit_tag option, name:"choice", class: "answer-button" %>
+        <% @options.each do |option| %>
+    	<p><%= submit_tag option, name:"choice", class: "answer-button" %></p>
     	    <% end %>
     	<% end %>
 

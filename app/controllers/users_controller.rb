@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
 # ユーザークイズ一覧
   def home
-    @quizzes = current_user.quizzes
+    @quizzes = current_user.quizzes.page(params[:page]).per(5)
     @users = User.all
   end
 

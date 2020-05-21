@@ -1,0 +1,14 @@
+<% if session[:result].count(true) == 0 %>
+  	<p class="title">あなたの物語はこれから</p>
+	<% elsif session[:result].count(true) == 1 %>
+		<p class="title">⭐️冒険のはじまり</p>
+	<% elsif session[:result].count(true) == 2 %>
+		<p class="title">⭐️⭐️movie修行中</p>
+	<% elsif session[:result].count(true) == 3 %>
+		<p class="title">⭐️⭐️⭐️オールジャンルをめざせ🎬</p>
+	<% elsif session[:result].count(true) == 4 %>
+		<p class="title">⭐️⭐️⭐️⭐️輝くmovieスター💃</p>
+	<% elsif session[:result].count(true) == 5 %>
+		<p class="title">⭐️⭐️⭐️⭐️⭐️すばらしい！あなたがmovie王！👑</p>
+
+<% end %>

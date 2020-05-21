@@ -3,12 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+/*movie index
+-----------------------------*/
 #moviewrapper{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 4%;
-	border-top: 1px dashed lightgray;
 	}
 
 .element1 {
@@ -18,4 +19,14 @@
 .element2 {
     margin-top: 35px;
 	width: 73%;
+}
+
+/*movie edit
+-----------------------------*/
+#editwrapper {
+	padding: 0 4%;
+
+	movieform {
+	  margin: 0 auto;
+	}
 }

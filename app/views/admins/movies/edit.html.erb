@@ -1,17 +1,8 @@
-<h1>映画情報更新</h1>
+<div id="editwrapper">
+  <p id="notice"><strong><%= flash[:notice] %></strong></p>
+      <div class="movieform">
+        <label>映画情報更新</label>
 
-<%= form_for(@movie, url: admins_movie_path, method: :patch) do |f| %>
-
-    <label>画像</label><br />
-    <%= f.attachment_field :image %>
-    <label>お題</label><br />
-    <%= f.collection_select :theme_id, @themes, :id, :theme %><br />
-    <label>制作年</label><br />
-    <%= f.select :year, Movie.years.keys, :selected=>Movie.years[@movie.year] %><br />
-    <label>タイトル</label><br />
-    <%= f.text_field :title %><br />
-    <label>コラム</label><br />
-    <%= f.text_area :column %><br />
-    <%= f.submit '変更する'%><br />
-
-<% end %>
+            <%= render 'admins/movies/newform', movie: @movie %>
+      </div>
+</div>

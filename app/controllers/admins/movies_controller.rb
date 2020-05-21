@@ -7,7 +7,7 @@ class Admins::MoviesController < ApplicationController
   def index
   	@newmovie = Movie.new
     @themes = Theme.all
-    @movies = Movie.all.page(params[:page]).per(5)
+    @movies = Movie.page(params[:page])
   end
 
   def create
@@ -30,7 +30,7 @@ class Admins::MoviesController < ApplicationController
        redirect_to admins_movies_path
        flash[:notice]= "更新しました！"
     else
-       render root_path
+       render admins_movies_path
     end
   end
 
