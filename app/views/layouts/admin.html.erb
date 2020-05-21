@@ -9,7 +9,7 @@
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
-  <header class="all-header wrapper">
+  <header class="header navwrapper">
         <nav>
           <ul class="main-nav">
   		        <% if admin_signed_in? %>
@@ -21,18 +21,15 @@
   </header><!--all header wrapper-->
 
   <body>
-    <div id="wrapper">
-      <div class="home-content wrapper">
-        <p id="notice"><%= notice %></p>
+      <div class="home-content">
       		<main>
       			<%= yield %>
       		</main>
       </div><!--home-content wrapper -->
 
 <!-- footer---------------->
-      <footer>
-        <p class="text">2020 Presented by movieQ.</p>
-      </footer>
+      <admin-footer>
+      </admin-footer>
     </div>
   </body>
 </html>

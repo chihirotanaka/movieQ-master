@@ -1,9 +1,10 @@
 <table class="table table-default">
+  <thead class="thead-light">
     <tr>
       <th>画像</th>
       <th>作品名</th>
       <th>コラム</th>
-      <th>制作年</th>
+      <th>制作</th>
       <th>お題</th>
       <th colspan="2"></th>
     </tr>
@@ -23,4 +24,6 @@
           </td>
       </tr>
     <% end %>
+  </thead>
 </table>
+<div class="text-center"><%= paginate movies %></div>

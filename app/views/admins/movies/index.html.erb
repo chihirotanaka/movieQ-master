@@ -1,10 +1,9 @@
-
-<section id="movie">
-    <div class="wrapper">
+<div id="moviewrapper">
+  <p id="notice"><strong><%= flash[:notice] %></strong></p>
       <div class="element1">
 
         <h2>movie情報作成</h2>
-          <%= render 'admins/movies/form', movie: @newmovie %>
+          <%= render 'admins/movies/newform', movie: @newmovie %>
         </div>
 
       <div class="element2">
@@ -12,4 +11,4 @@
           <%= render 'admins/movies/movie-table', movies: @movies %>
       </div>
     </div>
-</section>
+</div>

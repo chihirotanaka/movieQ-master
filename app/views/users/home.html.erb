@@ -1,26 +1,29 @@
+<p><strong><%= flash[:notice] %></strong></p>
+
 <h2>クイズ一覧</h2>
 <!-- クイズ一覧 -->
 <div class="element">
-  <table class="table table-default">
-      <tr>
-        <th>絵文字😄</th>
-        <th>Question</th>
-        <th colspan="2">編集</th>
-      </tr>
-      <% @quizzes.each do |q| %>
-      <tr>
-          <td><%= q.emoji%>
-              <%= q.emoji2%>
-              <%= q.emoji3%>
-          </td>
-          <td><%= q.question%></td>
-          <td>
-            <%=link_to "編集",edit_quiz_path(q), class:"btn btn-success"%>
-            <%=link_to "削除" ,quiz_path ,method: :delete,
-           "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %>
-          </td>
-      </tr>
-      <% end %>
 
-  </table><!--quiz-table -->
+    <table class="table table-default">
+        <tr>
+          <th>絵文字😄</th>
+          <th>Question</th>
+          <th colspan="2">編集</th>
+        </tr>
+        <% @quizzes.each do |q| %>
+        <tr>
+            <td><%= q.emoji%>
+                <%= q.emoji2%>
+                <%= q.emoji3%>
+            </td>
+            <td><%= q.question%></td>
+            <td>
+              <%=link_to "編集",edit_quiz_path(q), class:"btn btn-success"%>
+              <%=link_to "削除" ,quiz_path ,method: :delete,
+             "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %>
+            </td>
+        </tr>
+        <% end %>
+    </table><!--quiz-table -->
+
 </div>

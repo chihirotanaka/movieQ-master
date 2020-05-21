@@ -28,7 +28,7 @@ body,
 
 /*header
 ---------------------------*/
-.all-header {
+.header {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
@@ -70,15 +70,20 @@ body,
   color: #333;
 }
 
-/*footer
+/*footer admin-footer
 ---------------------------*/
-footer {
+footer ,admin-footer{
   text-align: center;
-  padding: 50px 0;
   background-color: #333;
   margin-top: auto;
 
   p {
     color: #fff;
   }
+}
+footer {
+  padding: 50px 0;
+}
+admin-footer {
+  padding: 30px 0;
 }
