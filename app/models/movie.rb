@@ -12,4 +12,13 @@ class Movie < ApplicationRecord
      "2014":25,"2015":26,"2016":27,"2017":28,"2018":29,"2019":30,
      "2020":31
     }
+    validates :column, length: {maxmum: 70,minimum: 20}
+    validates :title, length: {maxmum: 15,minimum: 2}
+    with_options presence: true do
+      validates :title
+      validates :column
+      validates :year
+      validates :theme_title
+      validates :image
+    end
 end

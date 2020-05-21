@@ -7,4 +7,7 @@ class User < ApplicationRecord
   acts_as_paranoid
   has_many :quizzes, dependent: :destroy
 
+
+  validates :name, presence: true, length: {maximum: 20, minimum: 2}
+
 end
