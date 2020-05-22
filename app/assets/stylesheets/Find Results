@@ -1,0 +1,192 @@
+Searching 4146 files for "#fff"
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/app/assets/stylesheets/application.scss:
+   80  
+   81    p {
+   82:     color: white;
+   83    }
+   84  }
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/app/assets/stylesheets/playquizzes.scss:
+   35        text-align: center;
+   36        font-size: 2rem;
+   37:       color: white;
+   38      }
+   39  }
+   ..
+   67    .answer-button {
+   68        background: #333;
+   69:       color: white;
+   70        padding: 18px;
+   71        font-size: 2rem;
+   ..
+  151  .total-button {
+  152    text-align: center;
+  153:   background-color: white;
+  154  }
+  155  
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/app/assets/stylesheets/quizzes.scss:
+   25  	font-size: 2rem;
+   26  	background: #0bd;
+   27: 	color: white;
+   28  	border-radius: 70px;
+   29  	padding: 18px 32px;
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/0k/0keGMR9YZ0EJoY3Xhg_Zy8kGf4ZwHsGaeNZ8SRq5shA.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/15/15ODGEa-_bh_c1pkYwwBjKdN2nnN1fI4doLoVHjiRzA.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/2d/2d-nw4sqYiMsAnXeR9uEoC9tZAZuvtbWnTWwFkGs5Ts.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/47/47q0ijPaVhAdeEizYABowL0oeN5ROHD_-GLPHq4w0Uk.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/4m/4M7Tk1NMF_VOIVf5C7WgvKkSIViFhSbLsZPCnlxbQmA.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/5J/5j3WiL-JPUghKkVFtx8ETcXDLPOJgrinBH76R75DeLE.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/7d/7dXcLsb0JB7DdA6iJQi9jb8_Z9oirvZfjMk3bVdroY4.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/8M/8mOR0qFLAneXxBANf_nnxq6Y-ZV4EzUu_Rkt2PtrC8E.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/AE/aenJelUOubp8FnMU7L7Njc5QWXHfnSQHWCa4rRMjqBE.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/AF/aFCbwtM-FxkFTeE_Af7o2ErVsUgi3zo_yEWssKwV-QU.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/B_/B_93vLkJ3Z818z2qAFno-TqxyaoWWRiti_yvVLv6YBQ.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/bA/bAaZvntFVnrlXyAAZvuRKpDK-4v3_0jIS_Em2ccz_AU.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/BD/BdECOUgVWlaSQAb4QehoR6zrKrfRtMLitq1xmdn3X9c.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/CQ/cqY4so9NYZGtpb3d-JgBoyEnnns2K7m-9Z-fTFCWDhU.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/cy/cYZWVpMQYxgK2jP33SE_9rENpzW_-99FO0pdZsDlmbI.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/D7/d7LQjz7zCyj69IPJvayFkgd0WRZ4GXMSZDX1dctvPQk.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/dn/DnNUGjfZzOkrOptMhtT0iGiyOKRg_4KDqEUmQu6gps8.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/DP/DpGChXLIqoNiF-0wevW253mIvl25WOQfk9l137IdEeI.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/eY/EY9hFlAXNWFXhrEiGoNqjh5qJpOKrYBcsQ1PgmiURJI.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/FD/FDOxD8VwWbZM6ZAnlJZ6ue1l22cRCB2hIfGnFebuVuQ.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/fG/fGZvb3_vbN3SXSi8yEJl_8JhWaMrzw9NA22vdztgN18.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/FY/fys-Z9qkCxxyGbaQPtAaPbalTyeEd3zXT3JIJmOfxyc.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/Gk/Gk63Cuq-uar94xVGg-XnmAYwKJNjBcv2vKNrRgnl13A.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/h6/h6N0OgZFBjkiAxkAyM5EoIkzBMJZHNNGMXHV6-HTxZU.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/Hm/hm9mlAMBfd6SWHvscyQbp0lppdsku6CbTycd6m9BIrw.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/j6/j6RIA4kCnWxpTwSb51FpSJAUFO7BbQ6_DiRdWj5vErw.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/K5/K5zwMhw16YhiNIIL_u9wZGgIjoEVUDbaPTIwXqDWZjE.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/kn/kniWrXF7D2rtftpjHo6aJ6OOC6093udyVNoXzFPE0Kw.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/KV/kVZuucUbIgr2wCjMi28XnYAd_PZheY0K1RJmKCcmpuM.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/LP/lPXCc7l_IE2fvVY1rkv_BYZ64Fu8xq0l1QLKvG13X5s.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/n6/N65aojMK3HjMaqGIJNDXwKmoByS75EHKDGjXuKeU6fI.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/n9/n9E0s29BhRzWrW358Sr1TINbSgNLildBcV04r14bu4E.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/NL/nl4LsIdm8jnD45lZlLDCYw1tEuIrok218_1KOipazZs.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/nN/NN8ZUAIl_MGqCwOyw1fKxl4Z6aNvf3pnPBj2_Ssq4XA.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/PF/PFuaaBIJuARJ8SZTDEVTw6HXcyGDj1UBvgChQrAG2ek.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/PS/PsMDmaWFfAnJqLzs_LLKda_yoh9sFc2joXKYbz8ypkQ.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/QQ/Qqigna9xP6flTwHC2e-ypk8lAhwhN8Bbdp871qneU9s.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/rK/Rk06evL36tK3ROB0eKSE2f-2hRpHtVpqbL6RiW9GiC4.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/ry/RYrrEUnbDaLorutBTR8Js0QgLi8krh8fgZ83gRC_nQg.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/SC/SCE0abEooA2-6oJa4xBDGDXoDcwkIl4c2tbB-UtJZ0Y.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/SY/SyzleAxj58-UhMc5FGgFvP4oYB7QFweScfibyHh2r8Y.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/tO/tot81DSDSbBNkhV4dw0wv0uRxNW2dqrCy25vwuqaMY4.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/U_/u_DvKzIedO2gz97gAzdkZF3vFpcSDGpz2oMky3YT0-Y.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/VF/VfgJSINiKaBegYUh9Pze4ua23RwjJrJPCBRDxW3huYs.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/wG/wg0T9q5Iy1NCslwXqT09gdnOorPhgTFy0IepfaQlh4w.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/xM/xMxopUPXP9ycDFgavW54oyfOZ9UtWRv-OP4_Yy239m8.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/xq/xqF4SHs7Vu4VoV8xMhFclbcn7Gh8GrGZ6uM5r_glKA4.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/xq/xqNYm1NrWYr9T8NyXm_AUJSC6q-qDfsltp309YNg7Ec.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/Yi/YiCyiIEyodbHlfr74qKkSkST59QSL4j-oyRsmvzrqU0.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/Yw/YwEYNaO_tiKggC1mGU3p9ycOfH5nQubkLQgz-vUoB-Q.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/zm/zMoWngQzhXFHfgKqvveLE_v7HWw21BunXxL9dfP2kjs.cache:
+    <binary>
+
+/Users/tanakachihiro/Desktop/work/vagrant/movieQ-master/tmp/cache/assets/sprockets/v3.0/zQ/ZQk5K5ZNOXZh5g2FJeV2tWyqNCtrZfxZ9Sqt7qzmf_8.cache:
+    <binary>
+
+57 matches across 55 files

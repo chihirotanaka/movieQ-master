@@ -24,7 +24,7 @@
 .button1,.button2 {
 	font-size: 2rem;
 	background: #0bd;
-	color: #fff;
+	color: white;
 	border-radius: 70px;
 	padding: 18px 32px;
 
@@ -36,22 +36,32 @@
 /*about-container
 -------------------------------------*/
 .about-container {
+
+  background-color: Cornsilk;
+  border-top: 1px solid gold;
+  width: 100%;
+  height: auto;
+
+
 	.dounyu {
-	    color: #0bd;
+	  text-align: center;
 	}
 }
 
 .circle1,.circle2,.circle3 {
   position: relative;
   display: inline-block;
-  width: 300px;
-  height: 300px;
+  margin: 12px 5px;
+  width: 330px;
+  height: 330px;
   border-radius: 50%;
-  background: #0bd;
+  border: solid 3px skyblue;
+  background: white;
 
   span {
 		  position: absolute;
 		  display: inline-block;
+		  text-align: center;
 		  left: 0;
 		  top: 50%;
 		  -webkit-transform: translateY(-50%);
@@ -61,17 +71,10 @@
   }
 }
 
-
-
-  h2{
+  h2,p{
 	/*border-bottom:1px dashed #333;*/
       padding:4px 6px;
   }
-  p{
-	/*border-bottom:1px dashed #333;*/
-      padding:4px 6px;
-  }
-
 
 /*create
 -------------------------------------*/

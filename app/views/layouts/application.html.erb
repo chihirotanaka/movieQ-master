@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>む〜び〜Q</title>
+    <title>movieQ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,9 @@
   </head>
 <!-- header -->
  <body>
-  <header class="header navwrapper">
-      <h1><a class="logo" href="/">む〜び〜Q</a></h1>
+  <header>
+    <div class="header navwrapper">
+      <h1><a class="logo" href="/">movieQ</a></h1>
       <nav>
           <ul class="main-nav">
       <!--ユーザーサインイン時　-->
@@ -30,12 +31,14 @@
               <% end %>
           </ul><!--main-nav-->
         </nav>
+      </div>
     </header><!--all-header wrapper-->
       <div id="wrapper">
           <div class="home-content wrapper">
              <%= yield %>
           </div>
 <!-- footer -->
+          <div class="subfooter"></div>
           <footer>
             <p class="text">2020 Presented by movieQ.</p>
           </footer>
