@@ -9,17 +9,17 @@
 .quiz-top-contents {
     text-align: center;
     height: 400px;
-    margin-top: 80px;
+    margin-top: 120px;
 
 	h1 {
 		font-size: 8rem;
 		}
 	p{
 		margin: 10px 0 40px;
+		padding:4px 6px;
 		font-size: 1.4rem;
 	}
 }
-
 
 .button1,.button2 {
 	font-size: 2rem;
@@ -27,9 +27,11 @@
 	color: white;
 	border-radius: 70px;
 	padding: 18px 32px;
+	
 
 	&:hover {
 		background: #0090aa;
+		text-decoration: none;
 	}
 }
 
@@ -45,37 +47,31 @@
 
 	.dounyu {
 	  text-align: center;
+    height: auto;
 	}
 }
 
 .circle1,.circle2,.circle3 {
   position: relative;
   display: inline-block;
-  margin: 12px 5px;
-  width: 330px;
-  height: 330px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: solid 3px skyblue;
-  background: white;
+  background: #0bd;
 
   span {
-		  position: absolute;
-		  display: inline-block;
-		  text-align: center;
-		  left: 0;
-		  top: 50%;
-		  -webkit-transform: translateY(-50%);
-		  transform: translateY(-50%);
-		  width :300px;
-		  text-align:center;
+	  position: absolute;
+	  display: inline-block;
+	  text-align: center;
+	  left: 0;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	  width :300px;
+	  text-align:center;
   }
 }
-
-  h2,p{
-	/*border-bottom:1px dashed #333;*/
-      padding:4px 6px;
-  }
-
 /*create
 -------------------------------------*/
 #create-container {

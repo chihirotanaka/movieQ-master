@@ -1,18 +1,16 @@
 <div id="totalbox">
-  <p class="total-title">クイズ結果</p>
-
 	<div class="total-result">
 		<!-- 判定 -->
-        <%= render "playquizzes/title" %>
-
 			<h2>5問中<%= session[:result].count(true) %>問正解でした!</h2>
+
+			 <%= render "playquizzes/title" %>
 
 	　　<p><strong>間違えた作品もチェックしてね!</strong></p>
 
 		  <div class="moviebox">
 			   	<% session[:result].zip(@quizzes).each do |result, quiz| %>
 			   	  <div class="moviebox-item">
-					     <span class="jadge"><%=result ? '○' : '×' %></span>
+					     <span class="jadge"><%=result ? '○' : '!' %></span>
 					 	   <%= attachment_image_tag quiz.movie, :image, :fill, 100, 100, format:"jpg", class: "img-circle" %>
 						   <p><%= quiz.movie.title%></p>
 						</div>
@@ -21,8 +19,8 @@
 	</div><!--total-result-->
 
 <div class="total-button"><br />
-		<%=link_to"リトライ!", play_quiz_path, class:"btn btn-warning" %>
-		<%=link_to"TOPへ", "/", class:"btn btn-info" %>
+		<%=link_to"リトライ!", play_quiz_path, class:"btn btn-warning col-xs-3 btn-lg" %>
+		<%=link_to"TOPへ", "/", class:"btn btn-info col-xs-3 btn-lg" %>
 		<div class="twitter">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-primary" data-text="【movieQ 結果】5問中<%= session[:result].count(true) %>問正解でした！&#13;&#10;&#13;&#10;" data-url="http://localhost:3000" data-hashtags="movieQ" data-lang="ja" data-show-count="false" data-size="large">Tweet</a>
 		</div><!--twitter-->
