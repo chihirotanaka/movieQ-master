@@ -1,30 +1,29 @@
 <div id="resultbox">
   <div class="result-box">
+
      <p class="result-p">
-      <%= @quiz.result %></p>
-      <p>正解は<%= @quiz.answer %>でした！</p>
-
-
-
+        <%= @quiz.result %></p>
+        <p>正解は <strong><span style="font-size: 2.5rem;"><%= @quiz.answer %></strong></span> でした!
+        </p>
+<!-- column -->
       <div class="result-column">
-          <img><%= attachment_image_tag @movie, :image, :fill, 135, 135, format: 'jpeg', class: "img-default pull-left movie-img", fallback: "#",border:"2px" %>
-          </img>
+          <img><%= attachment_image_tag @movie, :image, :fill, 131, 131, format: 'jpeg', class: "img-default pull-left movie-img", fallback: "#",border:"2px" %></img>
+        <p>クイズに出てきた作品は..<br><%= @movie.title %></p>
         <ul>
-          <li>クイズに出てきた作品は..   <%= @movie.title %></li>
-            <li>
-              <%= @movie.year %>年制作</li>
-              <%= @movie.column %></li>
+          <li><%= @movie.year %>年制作</li>
+          <li><%= @movie.column %></li>
         </ul>
-    </div>
+      </div>
+<!-- button -->
       <% if session[:quiz_num] == 4 %>
         		<%= form_tag total_quiz_path, method: :get do %>
-        			<%= submit_tag '結果は..', class: "btn btn-danger btn-lg button col-xs-4" %>
+        			<%= submit_tag '結果は..', class: "btn btn-danger btn-lg button col-xs-12" %>
         		<% end %>
       <% else %>
         		<%= form_tag play_quiz_path, method: :get do %>
-        			<%= submit_tag '次へ', class: "btn btn-warning btn-lg button col-xs-4" %>
+        			<%= submit_tag '次へ', class: "btn btn-warning btn-lg button col-xs-12" %>
         		<% end %>
       <% end %>
-    </div>
-  </div>
-</div>
+
+  </div><!--result-box-->
+</div><!--resultbox-->

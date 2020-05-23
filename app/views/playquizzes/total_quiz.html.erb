@@ -1,31 +1,33 @@
 <div id="totalbox">
 	<div class="total-result">
 		<!-- 判定 -->
-			<h2>5問中<%= session[:result].count(true) %>問正解でした!</h2>
-
+			<h1>5問中<%= session[:result].count(true) %>問正解でした!</h1>
+			<h5>【あなたの称号】</h5>
 			 <%= render "playquizzes/title" %>
 
-	　　<p><strong>間違えた作品もチェックしてね!</strong></p>
+	　　<h5><strong>知らない作品はチェックしてね!</strong></h5>
 
-		  <div class="moviebox">
+		<div class="moviebox">
 			   	<% session[:result].zip(@quizzes).each do |result, quiz| %>
 			   	  <div class="moviebox-item">
-					     <span class="jadge"><%=result ? '○' : '!' %></span>
+					     <span class="jadge"><%=result ? '○' : '×' %></span>
 					 	   <%= attachment_image_tag quiz.movie, :image, :fill, 100, 100, format:"jpg", class: "img-circle" %>
 						   <p><%= quiz.movie.title%></p>
-						</div>
-					<% end %>
-		  </div><!--moviebox-->
+					  </div>
+				  <% end %>
+		</div><!--moviebox-->
 	</div><!--total-result-->
 
 <div class="total-button"><br />
 		<%=link_to"リトライ!", play_quiz_path, class:"btn btn-warning col-xs-3 btn-lg" %>
 		<%=link_to"TOPへ", "/", class:"btn btn-info col-xs-3 btn-lg" %>
+
+
 		<div class="twitter">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-primary" data-text="【movieQ 結果】5問中<%= session[:result].count(true) %>問正解でした！&#13;&#10;&#13;&#10;" data-url="http://localhost:3000" data-hashtags="movieQ" data-lang="ja" data-show-count="false" data-size="large">Tweet</a>
+
+		<%= link_to image_tag('Twitter.png', :class => "add_style"), "https://twitter.com/share?url=https://3000&text=【movieQ 結果】5問中#{session[:result].count(true)}問正解でした！%20%23movieQ%20%0a", target: '_blank', class: 'add_style' %>
 		</div><!--twitter-->
 	</div><!--total-button-->
 </div><!--total-box-->
 
-<!--twitter script-->
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

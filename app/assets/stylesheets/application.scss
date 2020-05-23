@@ -22,7 +22,6 @@
 ---------------------------*/
 body,
 #wrapper {
-  display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: #333;
@@ -32,7 +31,6 @@ body,
 ---------------------------*/
 header {
   width: 100%;
-  position: fixed;
   background-color: gold;
 }
 .header {
@@ -74,6 +72,7 @@ header {
 ---------------------------*/
 .home-countent {
   color: #333;
+  padding: 0 4%;
 }
 
 /*footer admin-footer

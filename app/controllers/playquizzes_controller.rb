@@ -30,7 +30,7 @@ class PlayquizzesController < ApplicationController
     else
       # 不正解処理
       session[:result][session[:quiz_num]]= false
-      @quiz.result = "不正解"
+      @quiz.result = "不正解.."
       @movie = @quiz.movie
     end
   end

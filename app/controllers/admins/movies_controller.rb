@@ -7,7 +7,8 @@ class Admins::MoviesController < ApplicationController
   def index
   	@newmovie = Movie.new
     @themes = Theme.all
-    @movies = Movie.page(params[:page])
+    @movies = Movie.page(params[:page]).per(5)
+    @admins_movies = Movie.page(params[:page]).per(5)
   end
 
   def create

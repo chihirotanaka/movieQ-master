@@ -34,7 +34,7 @@
       </tr>
     <% end %>
 </table>
-          <div class="text-center"><%= paginate @movies, :params => { :controller => 'movies', :action => 'index', _: nil, _method: nil, authenticity_token: nil, utf8: nil} %></div>
+          <div class="text-center"><%= paginate @movies, params: {controller: 'admins/movies', action: 'index'}%></div>
       </div>
     </div>
 </div>

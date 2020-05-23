@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
   # 管理
   devise_for :admins, skip: :all
-  root 'admins/movies#index'
   devise_scope :admin do
     get 'admins/sign_in' => 'admins/sessions#new' , as: :new_admin_session
     post  'admins/sign_in' => 'admins/sessions#create' ,  as: :admin_session
