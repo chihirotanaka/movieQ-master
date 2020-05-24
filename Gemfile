@@ -74,4 +74,8 @@ gem 'impressionist'
 gem 'pry-byebug'
 gem 'rails-i18n'
 gem 'enum_help'
-
+# デプロイ
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
