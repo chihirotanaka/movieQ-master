@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :column
       t.integer :year, null:false, default: 0
-      t.integer :theme_title, null:false, default: 0
+      t.string :theme_title
 
       t.timestamps
     end

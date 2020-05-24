@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_050445) do
     t.string "title"
     t.text "column"
     t.integer "year", default: 0, null: false
-    t.integer "theme_title", default: 0, null: false
+    t.string "theme_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_id"

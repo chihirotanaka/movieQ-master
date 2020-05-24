@@ -8,28 +8,23 @@
       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
+    <body>
+      <header class="header navwrapper">
+            <nav>
+              <ul class="main-nav">
+      		        <% if admin_signed_in? %>
+         			      <li><%= link_to " TOP画面" , admins_movies_path ,  class: "admin-nav"%></li>
+        			      <li> <%= link_to " 管理者ログアウト" , destroy_admin_session_path ,method: :delete , class: "admin-nav" %></li>
+      		        <% end %>
+              </ul><!--main-nav-->
+            </nav>
+      </header><!--all header wrapper-->
 
-  <header class="header navwrapper">
-        <nav>
-          <ul class="main-nav">
-  		        <% if admin_signed_in? %>
-     			      <li><%= link_to " TOP画面" , admins_movies_path ,  class: "admin-nav"%></li>
-    			      <li> <%= link_to " 管理者ログアウト" , destroy_admin_session_path ,method: :delete , class: "admin-nav" %></li>
-  		        <% end %>
-          </ul><!--main-nav-->
-        </nav>
-  </header><!--all header wrapper-->
-
-  <body>
-      <div class="home-content">
-      		<main>
-      			<%= yield %>
-      		</main>
-      </div><!--home-content wrapper -->
+          <div class="home-content">
+            <div id="wrapper">
+          			<%= yield %>
+          </div><!--home-content wrapper -->
 
 <!-- footer---------------->
-      <admin-footer>
-      </admin-footer>
-    </div>
   </body>
 </html>
