@@ -1,4 +1,9 @@
 server '54.168.198.112', user: 'ec2-user', roles: %w{app web db}
+set :ssh_options, {
+	user: 'ec2-user',
+	keys: %w(~/.ssh/practice-aws.pem),
+	forward_agent: true
+}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
