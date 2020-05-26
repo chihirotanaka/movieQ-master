@@ -7,7 +7,7 @@
         </p>
 <!-- column -->
       <div class="result-column">
-          <img><%= attachment_image_tag @movie, :image, :fill, 131, 131, format: 'jpeg', class: "img-default pull-left movie-img", fallback: "#",border:"2px" %></img>
+          <img><%= attachment_image_tag @movie, :image, , size: "131x131", format: 'jpeg', class: "img-default pull-left movie-img", fallback: "#",border:"2px" %></img>
         <p>クイズに出てきた作品は..<br><%= @movie.title %></p>
         <ul>
           <li><%= @movie.year %>年制作</li>
