@@ -23,15 +23,30 @@
 
 .button1,.button2 {
 	font-size: 2rem;
-	background: #0bd;
-	color: white;
 	border-radius: 70px;
+}
+.button1 {
 	padding: 18px 32px;
-
+	color: white;
+	background: #0bd;
 	&:hover {
-		background: #0090aa;
+	    background: white;
+	    border: 2px solid #0bd;
+	    color: #0bd;
 		text-decoration: none;
-	}
+		}
+}
+
+.button2 {
+	padding: 18px 44px;
+	color: white;
+	background: gold;
+	&:hover {
+	    background: white;
+	    border: 2px solid gold;
+	    color: gold;
+		text-decoration: none;
+		}
 }
 
 /*about-container
@@ -71,12 +86,17 @@
 	  text-align:center;
   }
 }
-/*create
+/*new create
 -------------------------------------*/
 #create-container {
   padding: 0 8%;
+  margin-top: 20px;
   text-align: center;
 }
+.emoji-field {
+	height: 110%;
+}
+
 
 .required {
 	color: white;

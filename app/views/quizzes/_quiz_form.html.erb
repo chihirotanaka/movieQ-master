@@ -1,0 +1,58 @@
+<%= form_for(quiz) do |f| %>
+   <%= render "quizzes/alert_messages", quiz: quiz %>
+
+            <div class="form-group row">
+                <span class="label label-info">任意</span>
+       	        <%= f.label "お題をえらぶ", class: "control-label lead"%>
+                <%= f.collection_select :theme_id , @themes , :id, :theme ,class: "form-control"%><br />
+            </div>
+            <div class="form-group">
+                <span class="label label-danger">必須</span>
+                <%= f.label "好きなタイトルを選ぶ", class: "control-label lead" %>
+                <%= f.collection_select :movie_id, @movies, :id, :title ,class: "form-control"%><br />
+            </div>
+            <div class="form-group">
+       	        <%= f.label "絵文字をえらぶ " , class: "control-label lead"%><br />
+                 <span><small>※選んだタイトルを絵文字で表現してください</small></span><br />
+                 <span><small> 例：ハリーポッター=>1:🧹2:⚡︎3:👦</small></span><br />
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                  <span class="label label-danger">必須</span>
+                  <%= f.label "1", class: "control-label" %>
+         	        <%= f.text_field :emoji, class: "form-control form-group-lg" %>
+              </div>
+              <div class="col-xs-4">
+                  <span class="label label-danger">必須</span>
+                  <%= f.label "2", class: "control-label" %>
+                  <%= f.text_field :emoji2, class: "form-control form-group-lg" %>
+              </div>
+              <div class="col-xs-4">
+                  <span class="label label-danger">必須</span>
+                  <%= f.label "3", class: "control-label" %>
+                  <%= f.text_field :emoji3, class: "form-control form-group-lg" %>
+              </div>
+            </div><br />
+            <div class="form-group">
+       	        <%= f.label "問題文をつくる", class: "control-label lead" %><br />
+                <span class="label label-danger">必須</span>
+                <%= f.label "Q", class: "control-label" %>
+       	        <%= f.text_field :question, class: "form-control" %><br />
+            </div>
+
+
+            <div class="form-group">
+       	        <%= f.label "選択肢をつくる", class: "control-label lead"%><br />
+                <span class="label label-danger">必須</span>
+                <%= f.label "[答え]の選択肢", class: "control-label" %>
+      	        <%= f.text_field :answer, placefolder:"ここに答えを記入", class: "form-control" %><br />
+                <span class="label label-danger">必須</span>
+                <%= f.label "2つめの選択肢", class: "control-label" %>
+       	        <%= f.text_field :answer2, class: "form-control" %><br />
+                <span class="label label-danger">必須</span>
+                <%= f.label "3つめの選択肢", class: "control-label" %>
+                <%= f.text_field :answer3, class: "form-control" %><br />
+            </div>
+        <%= f.submit '作成する',class: "btn btn-info btn-block btn-lg" %>
+
+<% end %>

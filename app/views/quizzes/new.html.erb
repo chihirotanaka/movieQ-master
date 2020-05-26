@@ -1,10 +1,12 @@
 <div id="create-container">
   <div class="panel panel-default">
-    <div class="panel-heading">クイズをつくってみよう</div>
+    <div class="panel-heading lead">クイズをつくろう</div>
         <div class="panel-body">
 
-  <%= render "quizzes/newmovie-form", quiz: @newquiz %>
+    <!-- error-message -->
 
-        </div><!--panel-body-->
-      </div><!--panel panel-default-->
-    </div><!--create-container-->
+<%= render 'quizzes/quiz_form', quiz: @newquiz %>
+
+    </div><!--panel-body-->
+  </div><!--panel panel-default-->
+</div><!--create-container-->

@@ -23,7 +23,7 @@ class QuizzesController < ApplicationController
     redirect_to user_home_path(current_user)
     flash[:notice]= "作成しました！"
     else
-    render new_quiz_path
+    render 'new'
     end
   end
 
@@ -38,7 +38,7 @@ class QuizzesController < ApplicationController
        redirect_to user_home_path(current_user)
        flash[:notice]= "更新しました！"
     else
-       render root_path
+       render user_home(current_user)
     end
   end
 
@@ -48,7 +48,7 @@ class QuizzesController < ApplicationController
        redirect_to user_home_path(current_user)
        flash[:notice]= "削除しました！"
     else
-      render 'back'
+      render user_path(current_user)
     end
   end
 

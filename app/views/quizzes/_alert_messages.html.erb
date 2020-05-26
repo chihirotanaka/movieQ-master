@@ -1,10 +1,9 @@
-<% if model.error.any? %>
-  <div class="alert alert primary">
-  	<%= model.errors.count %>件の修正があります。%>
-	  	<ul>
-	  		<% model.error.full_messages.each do |message|%>
-	  		<li><%=message %></li>
-	  		<% end %>
-	  	</ul>
-  	</div>
+<% if quiz.errors.any? %>
+        <div class="alert alert-danger">
+	        <ul style="list-style: none;">
+	          <% quiz.errors.full_messages.each do |message|%>
+	          <li><%= message %></li>
+	          <% end %>
+	        </ul>
+        </div>
 <% end %>
