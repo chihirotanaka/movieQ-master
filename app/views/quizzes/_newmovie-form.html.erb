@@ -1,4 +1,6 @@
 <%= form_for(quiz) do |f| %>
+<!-- error-message -->
+    <% render "quizzes/alert_messages" , model: quiz %>
 
         <div class="form-group">
    	        <%= f.label "お題をえらぶ" , class: "control-label"%><br />
