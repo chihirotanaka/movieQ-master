@@ -23,7 +23,7 @@ class QuizzesController < ApplicationController
     redirect_to user_home_path(current_user)
     flash[:notice]= "作成しました！"
     else
-    render 'new'
+    render :new
     end
   end
 

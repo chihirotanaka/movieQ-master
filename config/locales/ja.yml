@@ -1,12 +1,16 @@
 ja:
-  enums:
-    movie:
-      theme_title:
-        '---': "---"
-        USATOP5: アメリカ映画TOP5
-        JATOP5: 日本映画TOP5
-        GhibliTOP5: ジブリ映画TOP5
-        Topicwork5: 今話題の5作品
+  activerecord:
+    models:
+      quiz: クイズ
+    attributes:
+      quizzes:
+        question:  問題文
+        emoji: 1番目絵文字
+        emoji2: 2番目の絵文字
+        emoji3: 3番目の絵文字
+        answer:  答えの選択肢
+        answer2: 2の選択肢
+        answer3: 3の選択肢
   helpers:
     page_entries_info:
       more_pages:
@@ -23,3 +27,4 @@ ja:
       next: "次 &rsaquo;"
       previous: "&lsaquo; 前"
       truncate: "&hellip;"
+

@@ -1,28 +1,35 @@
-<div id="totalbox">
-	<div class="total-result">
-		<!-- 判定 -->
-			<h1>5問中<%= session[:result].count(true) %>問正解でした!</h1>
-			<h5>【あなたの称号】</h5>
-			 <%= render "playquizzes/title" %>
+<div class="quiz-header"></div>
+  <div id="totalbox">
+		<div class="total-result">
+				<!-- 判定 -->
+					<p class="total-text">5問中<%= session[:result].count(true) %>問正解でした!</p>
+					<h5>【称号】</h5>
+					 <%= render "playquizzes/title" %>
 
-	　　<h4><strong>知らない作品はチェックしてね!</strong></h4>
+			　　 <h4>
+				    <strong>知らない作品はチェックしてね!</stron>
+			    </h4>
 
-		<div class="moviebox">
-			   	<% session[:result].zip(@quizzes).each do |result, quiz| %>
-			   	  <div class="moviebox-item">
-					     <span class="jadge"><%=result ? '○' : '×' %></span>
-					 	   <%= attachment_image_tag quiz.movie, :image, size: "100x100", format:"jpg", class: "img-circle" %>
-						   <p><%= quiz.movie.title%></p>
-					  </div>
-				  <% end %>
-		</div><!--moviebox-->
-		<!--twitter-->
-        <br><%= render "playquizzes/social"%>
-	</div><!--total-result-->
+					<div class="moviebox">
+						   	<% session[:result].zip(@quizzes).each do |result, quiz| %>
+						   	  <div class="moviebox-item">
+								     <span class="jadge"><%=result ? '○' : '×' %></span>
+								 	   <%= attachment_image_tag quiz.movie, :image, size: "100x100", format:"jpg", class: "img-circle" %>
+									   <p><%= quiz.movie.title%></p>
+								  </div>
+							  <% end %>
+					</div><!--moviebox-->
 
-<div class="total-button"><br />
-		<%=link_to"リトライ!", play_quiz_path, class:"btn btn-warning col-xs-6 btn-lg" %>
-		<%=link_to"TOPへ", "/", class:"btn btn-info col-xs-6 btn-lg" %>
-	</div><!--total-button-->
-</div><!--total-box-->
+	    <!--twitter-->
+	    <div class="social">
+	      <%= render "playquizzes/social"%>
+	    </div>
 
+	  <div class="total-button"><br />
+	  	<div class="row">
+			<%=link_to"リトライ!", play_quiz_path, class:"btn btn-warning col-xs-6 btn-lg" %>
+			<%=link_to"TOPへ", "/", class:"btn btn-info col-xs-6 btn-lg" %></div>
+			</div><!--total-result-->
+		</div><!--total-button-->
+  </div><!--total-box-->
+<div class="quiz-footer"></div><!--quiz-footer-->
