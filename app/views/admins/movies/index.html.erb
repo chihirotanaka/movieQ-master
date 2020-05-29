@@ -19,7 +19,7 @@
     </tr>
     <% @movies.each do |movie| %>
       <tr>
-          <td><%= attachment_image_tag movie, :image, , size: "50x50", format:"jpg", class: "img-circle pull-left" %>
+          <td><%= attachment_image_tag movie, :image, size: "50x50", format:"jpg", class: "img-circle pull-left" %>
           </td>
           <td>
             <%=link_to movie.title, edit_admins_movie_path(movie) %>
