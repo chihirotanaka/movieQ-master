@@ -8,7 +8,7 @@
           <th>絵文字😄</th>
           <th>Question-問題-</th>
           <th>選択肢</th>
-          <th colspan="2">編集</th>
+          <th colspan="2"></th>
         </tr>
         <% @quizzes.each do |q| %>
         <tr>
@@ -25,9 +25,9 @@
               </ol>
             </td>
             <td>
-              <%=link_to "編集",edit_quiz_path(q), class:"btn btn-success"%>
-              <%=link_to "削除" ,quiz_path(q) ,method: :delete,
-             "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %>
+                <%=link_to "編集",edit_quiz_path(q), class:"btn btn-success"%>
+                <%=link_to "削除" ,quiz_path(q) ,method: :delete,
+               "data-confirm"=>"本当に削除しますか？", class:"btn btn-danger " %>
             </td>
         </tr>
         <% end %>

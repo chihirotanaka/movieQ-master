@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get 'playquizzes/quiz' => 'playquizzes#play_quiz' ,as: :play_quiz
   get 'playquizzes/result' => 'playquizzes#result_quiz' ,as: :result_quiz
   get 'playquizzes/total' => 'playquizzes#total_quiz' ,as: :total_quiz
+  # game画面(単品)
+  #get 'testquizzes/quiz/:id' => 'testquizzes#test_play_quiz' ,as: :test
+  #get 'testquizzes/result/:id' => 'testquizzes#test_play_result' ,as: :test_result
 
 
   # 管理
